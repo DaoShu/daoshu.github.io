@@ -16,10 +16,11 @@
 
 <body>
 
-
-    <h1 class="logo img-responsive">
-        <img class="" src="./img/logo.png" alt="LOGO">
-    </h1>
+    <div class="container">
+        <h1 class="logo img-responsive">
+            <img class="" src="./img/logo.png" alt="LOGO">
+        </h1>
+    </div>
 
     <header class="navbar navbar-static-top bs-docs-nav" id="top">
         <div class="container">
@@ -32,7 +33,7 @@
                 </button>
             </div>
             <nav id="bs-navbar" class="navbar-collapse collapse" aria-expanded="true" style="">
-                <ul class="">
+                <ul class="clearfix">
                     <li><a href="javascript:;">首页</a></li>
                     <li><a href="javascript:;">产品</a></li>
                     <li><a href="javascript:;">技术</a></li>
@@ -47,7 +48,14 @@
 
     <section class="banner">
         <div class="banner-content img-responsive">
-            <a href="javascript:;"><img class="center-block" src="./img/banner_1.jpg" alt="上科banner图片"></a>
+            <img class="center-block" src="./img/banner_1.png" alt="上科banner图片">
+            <div class="banner-text">
+                <div class="banner-text-content">
+                    <p>专注高精度矫直机</p>
+                    <p>Focus on high-precision straightener</p>
+                </div>
+                <div class="btn-more">探索更多</div>
+            </div>
         </div>
     </section>
     <section class="main about">
@@ -66,15 +74,21 @@
                         <p class="text-indent">
                             长春上科盛荣科技有限公司位于素有“中国汽车工业摇篮”之称的吉林省长春市，是一家专业从事自动矫直、矫平设备、压装设备、装配线、汽车线束试验台、工业机器人等产品设计制造的高新技术企业。公司拥有一支有着多年产品设计研发经验的顶尖团队，经由该团队设计的300多台自动校直机、生产装配线产品，正在为国内外100多个汽......
                         </p>
-                        <div class="col-xs-12 text-center visible-lg-block ">
-                            <div class="col-xs-4 img-responsive">
+                        <div class="col-xs-12 text-center hidden-xs ">
+                            <div class="col-xs-4 text-center">
                                 <img src="./img/main_1_left_1.png" alt="">
+                                <p>责任</p>
+                                <p>Responsibility</p>
                             </div>
-                            <div class="col-xs-4 img-responsive">
+                            <div class="col-xs-4 text-center">
                                 <img src="./img/main_1_left_2.png" alt="">
+                                <p>品质</p>
+                                <p>Quality</p>
                             </div>
-                            <div class="col-xs-4 img-responsive">
+                            <div class="col-xs-4 text-center">
                                 <img src="./img/main_1_left_3.png" alt="">
+                                <p>创新</p>
+                                <p>Innovate</p>
                             </div>
                         </div>
                     </div>
@@ -101,44 +115,66 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 product-box">
+                    <div class="col-xs-12 product-box clearfix">
                         <!-- 产品滑动盒子 -->
-                        <div class="arrows-btn left hidden-xs">
+                        <div class="arrows-btn hidden-xs left disabled" id="arrowsLeft">
                             <img src="./img/arrows_left.png" alt="">
                         </div>
-                        <div class="col-xs-12 clearfix">
-                            <div class="product-box-item">
-                                <div class="product-box-img">
-                                    <img src="./img/product_1.png" alt="产品">
-                                    <div class="img-mask"></div>
+                        <div id="productBox" class="pull-left col-xs-12 clearfix product-box">
+                            <div class="product-slider-box clearfix">
+                                <div class="product-box-item col-sm-4">
+                                    <div class="product-box-img">
+                                        <img src="./img/product_1.png" alt="产品">
+                                        <div class="img-mask"></div>
+                                    </div>
+                                    <div class="product-box-btn">
+                                        <p>门型自动校直机</p>
+                                        <div class="btn-more">More</div>
+                                    </div>
                                 </div>
-                                <div class="product-box-btn">
-                                    <p>门型自动校直机</p>
-                                    <div class="btn-more">More</div>
+                                <div class="product-box-item col-sm-4">
+                                    <div class="product-box-img">
+                                        <img src="./img/product_2.png" alt="产品">
+                                        <div class="img-mask"></div>
+                                    </div>
+                                    <div class="product-box-btn">
+                                        <p>门型自动校直机</p>
+                                        <div class="btn-more">More</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product-box-item">
-                                <div class="product-box-img">
-                                    <img src="./img/product_2.png" alt="产品">
-                                    <div class="img-mask"></div>
+                                <div class="product-box-item col-sm-4">
+                                    <div class="product-box-img">
+                                        <img src="./img/product_3.png" alt="产品">
+                                        <div class="img-mask"></div>
+                                    </div>
+                                    <div class="product-box-btn">
+                                        <p>C型自动校直机</p>
+                                        <div class="btn-more">More</div>
+                                    </div>
                                 </div>
-                                <div class="product-box-btn">
-                                    <p>门型自动校直机</p>
-                                    <div class="btn-more">More</div>
+                                <div class="product-box-item col-sm-4 hidden-xs">
+                                    <div class="product-box-img">
+                                        <img src="./img/product_3.png" alt="产品">
+                                        <div class="img-mask"></div>
+                                    </div>
+                                    <div class="product-box-btn">
+                                        <p>C型自动校直机</p>
+                                        <div class="btn-more">More</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product-box-item">
-                                <div class="product-box-img">
-                                    <img src="./img/product_3.png" alt="产品">
-                                    <div class="img-mask"></div>
-                                </div>
-                                <div class="product-box-btn">
-                                    <p>C型自动校直机</p>
-                                    <div class="btn-more">More</div>
+                                <div class="product-box-item col-sm-4 hidden-xs">
+                                    <div class="product-box-img">
+                                        <img src="./img/product_3.png" alt="产品">
+                                        <div class="img-mask"></div>
+                                    </div>
+                                    <div class="product-box-btn">
+                                        <p>C型自动校直机</p>
+                                        <div class="btn-more">More</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="arrows-btn right hidden-xs">
+                        <div class="arrows-btn right hidden-xs" id="arrowsRight">
                             <img src="./img/arrows_right.png" alt="">
                         </div>
                     </div>
@@ -372,9 +408,11 @@
                 /
                 公司地址：长春市高新区众恒路456号 </p>
         </div>
-        <div class="col-xs-3 code img-responsive">
-            <img class="" src="./img/code.png" alt="">
-            <p>扫码关注我们</p>
+        <div class="col-xs-3 clearfix code img-responsive">
+            <div class="pull-right">
+                <img class="" src="./img/code.png" alt="">
+                <p>扫码关注我们</p>
+            </div>
         </div>
     </div>
     <div class="row copyright">
