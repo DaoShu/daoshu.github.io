@@ -671,3 +671,28 @@ nav ul li:hover a {
         font-size: 17px;
     }
 }
+
+/* 768888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
+@media (max-width: 640px) {
+    .banner-text {
+        left: 17%;
+        top: 44%;
+    }
+
+    .banner-text-content p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .banner-content .btn-more {
+        width: 90px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text-content p:nth-child(1) {
+        font-size: 16px;
+    }
+}
