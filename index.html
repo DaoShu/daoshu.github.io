@@ -5,258 +5,388 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/init.css">
+    <link rel="stylesheet" href="./css/style.css">
+
     <title>Document</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        
-        #myChart {
-            display: block;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="myChart"></div>
-
-    <script src="http://echarts.baidu.com/gallery/vendors/jquery/jquery.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/bootstrap/js/bootstrap.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/lodash.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/dat.gui.min.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.js"></script>
-    <script src="http://api.map.baidu.com/api?v=2.0&ak=53oVIOgmSIejwV7EfphPgTynOZbIiVYu"></script>
-    <script src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.js"></script>
-    <script src="index.js"></script>
 
 
-    <script type="text/javascript">
-        var myChart = echarts.init(document.getElementById('myChart'))
-        var csvData = null;
-        $.extend({
-            csv: function(url, fn) {
-                $.get(url, function(data) {
-                    var result = [];
-                    var json = {}
-                    var index = 0;
-                    var record = data.split(/\n/);
-                    for (var i = 0, l = record.length; i < l; i++) {
-                        var arr = record[i].split(',');
-                        if (!json[arr[0]]) {
-                            json[arr[0]] = {};
-                            // 测试 start
-                            json[arr[0]].coords = [
-                                [arr[2], arr[3]]
-                            ];
-                            // 测试 end
-                            json[arr[0]].index = index;
-                            result[index] = {};
-                            result[index].coords = [
-                                [arr[2], arr[3]]
-                            ];
-                            index++;
-                        } else {
-                            json[arr[0]].coords.push([arr[2], arr[3]]);
-                            result[json[arr[0]]['index']].coords.push([arr[2], arr[3]]);
-                        }
-                    }
-                    console.log(json);
-                    fn.call(this, result);
-                    result = null;
-                })
-            },
+    <h1 class="logo img-responsive">
+        <img class="" src="./img/logo.png" alt="LOGO">
+    </h1>
 
-            formatCoords: function(arr) {
-                for (var i = 0, l = arr.length; i < l; i++) {
-                    var coords = arr[i].coords;
-                    var splitCoords = $._chunk(coords, 10);
-                    for (var j = 0; j < splitCoords.length; j++) {
-                        var params = '';
-                        var wgs84togcj02;
-                        var gcj02tobd09;
-                        for (var k = 0, n = splitCoords[j].length; k < n; k++) {
-                            // params += splitCoords[j][k].join(',') + ';'
-                            wgs84togcj02 = coordtransform.wgs84togcj02(splitCoords[j][k][0], splitCoords[j][k][1]);
-                            gcj02tobd09 = coordtransform.gcj02tobd09(wgs84togcj02[0], wgs84togcj02[1]);
-                            splitCoords[j][k][0] = gcj02tobd09[0];
-                            splitCoords[j][k][1] = gcj02tobd09[1];
-                        }
-                    }
-                }
-            },
+    <header class="navbar navbar-static-top bs-docs-nav" id="top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" id="navToggleBtn" type="button" data-toggle="collapse" data-target="#bs-navbar"
+                    aria-controls="bs-navbar" aria-expanded="true">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav id="bs-navbar" class="navbar-collapse collapse" aria-expanded="true" style="">
+                <ul class="">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">产品</a></li>
+                    <li><a href="javascript:;">技术</a></li>
+                    <li><a href="javascript:;">方案</a></li>
+                    <li><a href="javascript:;">资讯</a></li>
+                    <li><a href="javascript:;">关于</a></li>
+                    <li><a href="javascript:;">联系</a></li>
+                    <li class="hidden-xs hidden-sm"><a href="javascript:;">English</a></li>
+            </nav>
+        </div>
+    </header>
 
-            _chunk: function(array, size) {
-                var result = [];
-                for (var x = 0; x < Math.ceil(array.length / size); x++) {
-                    var start = x * size;
-                    var end = start + size;
-                    result.push(array.slice(start, end));
-                }
-                return result;
-            }
-        }, )
+    <section class="banner">
+        <div class="banner-content img-responsive">
+            <a href="javascript:;"><img class="center-block" src="./img/banner_1.jpg" alt="上科banner图片"></a>
+        </div>
+    </section>
+    <section class="main about">
+        <div class="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-xs-12 col-md-12 col-sm-12">
+                        <h4>
+                            <span>SANCO</span>
+                            <span>关于上科</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <p class="text-indent">
+                            长春上科盛荣科技有限公司位于素有“中国汽车工业摇篮”之称的吉林省长春市，是一家专业从事自动矫直、矫平设备、压装设备、装配线、汽车线束试验台、工业机器人等产品设计制造的高新技术企业。公司拥有一支有着多年产品设计研发经验的顶尖团队，经由该团队设计的300多台自动校直机、生产装配线产品，正在为国内外100多个汽......
+                        </p>
+                        <div class="col-xs-12 text-center visible-lg-block ">
+                            <div class="col-xs-4 img-responsive">
+                                <img src="./img/main_1_left_1.png" alt="">
+                            </div>
+                            <div class="col-xs-4 img-responsive">
+                                <img src="./img/main_1_left_2.png" alt="">
+                            </div>
+                            <div class="col-xs-4 img-responsive">
+                                <img src="./img/main_1_left_3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img-responsive pad-l-10">
+                        <img src="./img/main_1.png" alt="正文图片"">
+                </div>
+                <div class="
+                            col-xs-12">
+                        <div class="btn-more">探索更多</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main product">
+        <div class="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-xs-12 col-md-12 col-sm-12">
+                        <h4>
+                            <span>START PRODUCT</span>
+                            <span>明星产品</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 product-box">
+                        <!-- 产品滑动盒子 -->
+                        <div class="arrows-btn left hidden-xs">
+                            <img src="./img/arrows_left.png" alt="">
+                        </div>
+                        <div class="col-xs-12 clearfix">
+                            <div class="product-box-item">
+                                <div class="product-box-img">
+                                    <img src="./img/product_1.png" alt="产品">
+                                    <div class="img-mask"></div>
+                                </div>
+                                <div class="product-box-btn">
+                                    <p>门型自动校直机</p>
+                                    <div class="btn-more">More</div>
+                                </div>
+                            </div>
+                            <div class="product-box-item">
+                                <div class="product-box-img">
+                                    <img src="./img/product_2.png" alt="产品">
+                                    <div class="img-mask"></div>
+                                </div>
+                                <div class="product-box-btn">
+                                    <p>门型自动校直机</p>
+                                    <div class="btn-more">More</div>
+                                </div>
+                            </div>
+                            <div class="product-box-item">
+                                <div class="product-box-img">
+                                    <img src="./img/product_3.png" alt="产品">
+                                    <div class="img-mask"></div>
+                                </div>
+                                <div class="product-box-btn">
+                                    <p>C型自动校直机</p>
+                                    <div class="btn-more">More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrows-btn right hidden-xs">
+                            <img src="./img/arrows_right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="main visiton">
+        <div class="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-xs-12 col-md-12 col-sm-12">
+                        <h4>
+                            <span>FIELD OF VISION</span>
+                            <span>上科视野</span>
+                        </h4>
+                    </div>
+                </div>
 
+                <div class="row ">
+                    <div class="switch-tab col-xs-12 clearfix">
+                        <div class="tab-item pull-left active">技术介绍</div>
+                        <div class="tab-item pull-left">解决方案</div>
+                        <div class="pull-right">More</div>
+                    </div>
+                </div>
 
-        $.csv('carData.1.txt', function(data) {
-            csvData = data;
-            $.formatCoords(csvData)
-                // console.log(csvData)
-            myChart.setOption(option = {
-                bmap: {
-                    center: [116.41, 39.92],
-                    zoom: 13,
-                    roam: true,
-                    mapStyle: {
-                        'styleJson': [{
-                            'featureType': 'water',
-                            'elementType': 'all',
-                            'stylers': {
-                                'color': '#031628'
-                            }
-                        }, {
-                            'featureType': 'land',
-                            'elementType': 'geometry',
-                            'stylers': {
-                                'color': '#000102'
-                            }
-                        }, {
-                            'featureType': 'highway',
-                            'elementType': 'all',
-                            'stylers': {
-                                'visibility': 'off'
-                            }
-                        }, {
-                            'featureType': 'arterial',
-                            'elementType': 'geometry.fill',
-                            'stylers': {
-                                'color': '#000000'
-                            }
-                        }, {
-                            'featureType': 'arterial',
-                            'elementType': 'geometry.stroke',
-                            'stylers': {
-                                'color': '#0b3d51'
-                            }
-                        }, {
-                            'featureType': 'local',
-                            'elementType': 'geometry',
-                            'stylers': {
-                                'color': '#000000'
-                            }
-                        }, {
-                            'featureType': 'railway',
-                            'elementType': 'geometry.fill',
-                            'stylers': {
-                                'color': '#000000'
-                            }
-                        }, {
-                            'featureType': 'railway',
-                            'elementType': 'geometry.stroke',
-                            'stylers': {
-                                'color': '#08304b'
-                            }
-                        }, {
-                            'featureType': 'subway',
-                            'elementType': 'all',
-                            'stylers': {
-                                'visibility': 'off'
-                            }
-                        }, {
-                            'featureType': 'building',
-                            'elementType': 'geometry.fill',
-                            'stylers': {
-                                'color': '#000000'
-                            }
-                        }, {
-                            'featureType': 'all',
-                            'elementType': 'labels.text.fill',
-                            'stylers': {
-                                'color': '#857f7f'
-                            }
-                        }, {
-                            'featureType': 'all',
-                            'elementType': 'labels.text.stroke',
-                            'stylers': {
-                                'color': '#000000'
-                            }
-                        }, {
-                            'featureType': 'building',
-                            'elementType': 'geometry',
-                            'stylers': {
-                                'color': '#022338'
-                            }
-                        }, {
-                            'featureType': 'green',
-                            'elementType': 'geometry',
-                            'stylers': {
-                                'color': '#062032'
-                            }
-                        }, {
-                            'featureType': 'boundary',
-                            'elementType': 'all',
-                            'stylers': {
-                                'color': '#465b6c'
-                            }
-                        }, {
-                            'featureType': 'manmade',
-                            'elementType': 'all',
-                            'stylers': {
-                                'color': '#022338'
-                            }
-                        }, {
-                            'featureType': 'label',
-                            'elementType': 'all',
-                            'stylers': {
-                                'visibility': 'off'
-                            }
-                        }, {
-                            "featureType": "local",
-                            "elementType": "geometry.stroke",
-                            "stylers": {
-                                "color": "#ff0000"
-                            }
-                        }, {
-                            "featureType": "arterial",
-                            "elementType": "geometry.stroke",
-                            "stylers": {
-                                "color": "#ff0000"
-                            }
-                        }, {
-                            "featureType": "highway",
-                            "elementType": "geometry.fill",
-                            "stylers": {
-                                "color": "#ff0000"
-                            }
-                        } ]
-                    }
-                },
-                series: [{
-                    type: 'lines',
-                    coordinateSystem: 'bmap',
-                    polyline: true,
-                    data: csvData,
-                    silent: true,
-                    lineStyle: {
-                        normal: {
-                            color: '#07bb07',
-                            opacity: .1,
-                            width: 1
-                        }
-                    },
-                    progressiveThreshold: 500,
-                    progressive: 200
-                }]
-            });
-        })
-    </script>
+                <div class="row visiton-text">
+                    <div class="clearfix col-xs-12 col-sm-6">
+                        <div class="col-xs-3 text-center">
+                            <p>27</p>
+                            <p>2018-10-11</p>
+                        </div>
+                        <div class="col-xs-9 pull-right text-content">
+                            <p>工件表面误差剔除技术</p>
+                            <p class="text-indent">
+                                ASMController控制系统软件集成了针对校直机产品设计的LSC算法，可以有效剔除轴类、管类零件本身的不圆度、毛刺等对测量结果的影响，真实反映零件偏心误差，排除......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix col-xs-12 col-sm-6">
+                        <div class="col-xs-3 text-center">
+                            <p>27</p>
+                            <p>2018-10-11</p>
+                        </div>
+                        <div class="col-xs-9 pull-right text-content">
+                            <p>工件表面误差剔除技术</p>
+                            <p class="text-indent">
+                                ASMController控制系统软件集成了针对校直机产品设计的LSC算法，可以有效剔除轴类、管类零件本身的不圆度、毛刺等对测量结果的影响，真实反映零件偏心误差，排除......
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row visiton-text">
+                    <div class="clearfix col-xs-12 col-sm-6">
+                        <div class="col-xs-3 text-center">
+                            <p>27</p>
+                            <p>2018-10-11</p>
+                        </div>
+                        <div class="col-xs-9 pull-right text-content">
+                            <p>工件表面误差剔除技术</p>
+                            <p class="text-indent">
+                                ASMController控制系统软件集成了针对校直机产品设计的LSC算法，可以有效剔除轴类、管类零件本身的不圆度、毛刺等对测量结果的影响，真实反映零件偏心误差，排除......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix col-xs-12 col-sm-6">
+                        <div class="col-xs-3 text-center">
+                            <p>27</p>
+                            <p>2018-10-11</p>
+                        </div>
+                        <div class="col-xs-9 pull-right text-content">
+                            <p>工件表面误差剔除技术</p>
+                            <p class="text-indent">
+                                ASMController控制系统软件集成了针对校直机产品设计的LSC算法，可以有效剔除轴类、管类零件本身的不圆度、毛刺等对测量结果的影响，真实反映零件偏心误差，排除......
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main advantage">
+        <div class="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-xs-12 col-md-12 col-sm-12">
+                        <h4>
+                            <span>PRODUCT ADVANTAGE</span>
+                            <span>产品优势</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row advantage-box">
+                    <div class="col-xs-6 col-sm-4 advantage-item">
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <img class="center-block" src="./img/advantage_1.png" alt="">
+                        <p>无人值守</p>
+                        <p>工件夹持、测量、校直、<br>
+                            复检全部自动完成</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 advantage-item">
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <img class="center-block" src="./img/advantage_2.png" alt="">
+                        <p>高精度自动测量</p>
+                        <p>测量误差≤0.005mm,<br>校直精度可达0.015mm</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 advantage-item">
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <img class="center-block" src="./img/advantage_3.png" alt="">
+                        <p>24小时连续运行</p>
+                        <p>24小时连续运行工作<br>效率成倍提升</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 advantage-item">
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <img class="center-block" src="./img/advantage_4.png" alt="">
+                        <p>一人可操作多台设备</p>
+                        <p>一人可操作多台设备<br>
+                            充分降低人员成本</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-4  advantage-item">
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <div class="border-animation"></div>
+                        <img class="center-block" src="./img/advantage_5.png" alt="">
+                        <p>伺服控制</p>
+                        <p>机器整体可实现伺服控<br>
+                            制降低操作流程</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main customers">
+        <div class="main-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="section-title col-xs-12 col-md-12 col-sm-12">
+                        <h4>
+                            <span>OUR CUSTOMERS</span>
+                            <span>我们的客户</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row customers-box">
+                    <ul>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-01.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-02.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-03.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-04.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-05.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-06.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-07.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-08.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-09.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-10.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-11.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-12.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-13.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-14.png" alt="">
+                        </li>
+                        <li class="col-xs-4">
+                            <img src="./img/company_logo/svg-15.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
+<footer class="main-container footer">
+    <div class="row">
+        <div class="col-xs-9">
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">产品</a></li>
+                    <li><a href="javascript:;">技术</a></li>
+                    <li><a href="javascript:;">方案</a></li>
+                    <li><a href="javascript:;">资讯</a></li>
+                    <li><a href="javascript:;">关于</a></li>
+                    <li><a href="javascript:;">联系</a></li>
+                </ul>
+            </nav>
+            <p class="contact">长春上科盛荣科技有限公司 / 24小时服务热线：0431-82223337 / 服务邮箱：shangkegroup@163.com / QQ:65412620 / <br>电话:13756977666
+                /
+                公司地址：长春市高新区众恒路456号 </p>
+        </div>
+        <div class="col-xs-3 code img-responsive">
+            <img class="" src="./img/code.png" alt="">
+            <p>扫码关注我们</p>
+        </div>
+    </div>
+    <div class="row copyright">
+        <div class="col-xs-12">
+            ICP备案编号：暂无 版权所有：长春上科盛荣科技有限公司
+        </div>
+    </div>
+</footer>
+
+<script src="
+                        ./js/jquery-1.10.2.min.js"> </script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
 
 </html>

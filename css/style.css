@@ -1,0 +1,524 @@
+/* 主色 #d70c25*/
+body {
+    height: 1800px;
+}
+
+/* common start */
+p.text-indent {
+    text-indent: 2em;
+}
+
+.btn-more {
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    margin: 10px auto;
+    background: #fff;
+}
+
+/* common end */
+/* header start */
+header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 5%;
+    top: 0px;
+    width: 120px;
+}
+
+.navbar {
+    position: absolute;
+}
+
+nav ul li {
+    margin: 0px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.navbar-toggle .icon-bar {
+    background: #444;
+}
+
+.navbar-show,
+.navbar-collapse {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+    color: #fbfbfb;
+    padding: 0 !important;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    /* background: #fff; */
+    background: rgba(216, 216, 216, 0.5);
+}
+
+nav ul li:hover a {
+    color: #333;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 28px;
+    height: 4px;
+    border-radius: 1px;
+    background: #111;
+}
+
+/* header end */
+/* main start */
+.main {
+    padding: 20px
+}
+
+.main .main-container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.section-title h4 {
+    margin-bottom: 20px;
+}
+
+.section-title h4 span:first-child {
+    color: #d70c25;
+    font-size: 22px;
+    font-weight: 600;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.section-title h4 span:last-child {
+    color: #333;
+    font-size: 15px;
+    text-indent: 6px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main p {
+    font-size: 12px;
+}
+
+.btn-more:hover {
+    background: #d70c25;
+    color: #fff;
+}
+
+/* main end */
+/* main - product start */
+.product {
+    background-color: #f2f2f2;
+}
+
+.product-box {
+    position: relative;
+}
+
+.arrows-btn {
+    min-width: 13px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows-btn.left {
+    left: 0;
+}
+
+.arrows-btn.right {
+    right: 0;
+}
+
+.product-box-item {
+    /* width: calc(33% - 10px);
+    float: left;*/
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.product-box-img {
+    background-color: #fff;
+    position: relative;
+}
+
+.product-box-item:hover .btn-more {
+    background: #d70c25;
+    color: #fff;
+}
+
+.product-box-item:hover .img-mask {
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background-color: #d70c25;
+}
+
+.product-box-img .img-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 9;
+    transition: all .2s ease-in-out;
+}
+
+.product-box-btn {
+    margin-top: 10px;
+}
+
+.product-box-btn p {
+    font-size: 14px;
+}
+
+/* main - product end */
+/* main - VISION start */
+.switch-tab {
+    border-bottom: 1px solid #d70c25;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.switch-tab div {
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+}
+
+.switch-tab .active {
+    background: #d70c25;
+    color: #fff;
+}
+
+.switch-tab div:hover {
+    background: #d70c25;
+    color: #fff;
+}
+
+.visiton-text .col-xs-12 {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.visiton .col-xs-3 {
+    background-color: #999999;
+    /* width: 90px; */
+    height: 70px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.visiton .col-xs-3 p {
+    letter-spacing: 0px;
+}
+
+.visiton .col-xs-9 {
+    height: 70px;
+}
+
+.visiton .col-xs-9 p:nth-child(2) {
+    height: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.visiton .col-xs-3 p:first-child {
+    font-size: 2.8em;
+}
+
+.visiton .col-xs-3 p:last-child {
+    font-size: 1em;
+}
+
+.visiton .text-content {
+    padding-left: 10px;
+}
+
+.visiton .text-content p:nth-child(1) {
+    font-size: 14px;
+    color: #d70c25;
+}
+
+.visiton .text-content p:nth-child(2) {
+    font-size: 12px;
+}
+
+/* main - VISION end */
+/* main advantage start */
+.advantage {
+    width: 100%;
+    /* height: 400px; */
+    background-image: url('../img/product_advantage.png');
+    text-align: center;
+}
+
+.advantage h4 span:nth-child(1) {
+    color: #fff;
+    font-size: 18px;
+}
+
+.advantage h4 span:nth-child(2) {
+    color: #fff;
+    font-size: 14px;
+}
+
+.advantage-item {
+    padding: 30px 0;
+    /* border: 1px solid rgba(0, 0, 0, 0); */
+    transition: all .2s ease-in-out;
+}
+
+.advantage-item .border-animation {
+    position: absolute;
+    background: none;
+    transition: all .2s ease-in-out;
+    width: 0;
+    height: 0;
+}
+
+.advantage-item .center-block {
+    height: 110px;
+}
+
+.advantage-item .border-animation:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    border-top: 1px solid white;
+}
+
+.advantage-item .border-animation:nth-of-type(2) {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+}
+
+.advantage-item .border-animation:nth-of-type(3) {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid white;
+}
+
+.advantage-item .border-animation:nth-of-type(4) {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+}
+
+.advantage-item:hover .border-animation:nth-of-type(1) {
+    width: 100%;
+}
+
+.advantage-item:hover .border-animation:nth-of-type(2) {
+    height: 100%;
+}
+
+.advantage-item:hover .border-animation:nth-of-type(3) {
+    width: 100%;
+}
+
+.advantage-item:hover .border-animation:nth-of-type(4) {
+    height: 100%;
+}
+
+.advantage-item p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.advantage-item p:last-child {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
+/* main advantage end */
+/* main customers start */
+.customers-box li {}
+
+/* main customers end */
+/* footer start */
+.footer {
+    background-color: #636160;
+}
+
+.footer .row {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.footer nav li {
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.footer li a {
+    color: #fff;
+}
+
+.footer .code {
+    color: #fff;
+    text-align: center;
+}
+
+.footer .code p {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 12px;
+}
+
+.code img {
+    font-size: 70px;
+}
+
+.footer .contact {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0px;
+}
+
+.footer .copyright {
+    width: 100%;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    background-color: #5a5a5a;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+/* footer end */
+@media (min-width: 768px) {
+    .pad-l-10 {
+        padding-left: 10px;
+    }
+
+    header h1 {
+        float: left;
+        width: 180px;
+    }
+
+    header nav ul li {
+        float: left;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .product-box-btn p {
+        font-size: 16px;
+    }
+
+    .switch-tab {
+        font-size: 16px;
+    }
+
+    .visiton .text-center {
+        font-size: 14px;
+    }
+
+    .advantage-item p {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .advantage-item p:last-child {
+        font-size: 13px;
+    }
+
+    .advantage-item .center-block {
+        height: 120px;
+    }
+
+    .customers-box li {
+        width: 20% !important;
+    }
+
+    .customers-box li img {
+        max-width: 99.9%;
+    }
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        float: left;
+        width: 200px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .advantage-item .center-block {
+        height: 130px;
+    }
+
+    header nav ul li {
+        margin: 0px 20px;
+    }
+
+    .footer nav li a {
+        font-size: 16px !important;
+    }
+
+    .footer .contact {
+        font-size: 14px;
+    }
+
+    .footer .copyright {
+        font-size: 14px;
+    }
+
+    .code img {
+        font-size: 100px;
+    }
+
+    .advantage-item p {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .advantage-item p:last-child {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .advantage-item {
+        width: 20%;
+    }
+}
