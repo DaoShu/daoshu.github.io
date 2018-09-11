@@ -4,10 +4,8 @@ $(function () {
             $('.navbar-header').addClass('navbar-show');
             $('#navToggleBtn .icon-bar').css('background', '#f3f3f3');
         } else {
-            setTimeout(() => {
-                $('.navbar-header').removeClass('navbar-show');
-                $('#navToggleBtn .icon-bar').css('background', '#444');
-            }, 400);
+            $('.navbar-header').removeClass('navbar-show');
+            $('#navToggleBtn .icon-bar').css('background', '#444');
         }
     })
 
@@ -21,7 +19,6 @@ $(function () {
 
 
     $(window).on('resize', function () {
-        console.log()
         var box = $('.product-slider-box');
         if (document.body.offsetWidth < 768) {
             box.css('width', 'auto');
@@ -32,6 +29,19 @@ $(function () {
         var productWidht = +((container.width() / 3).toFixed(2));
         box.css('width', productWidht * item.length + 'px');
         item.css('width', productWidht);
+    })
+
+
+    // 手机版的导航高度撑满屏幕
+    $('#navToggleBtn').on('click', function () {
+        var isShow = $('#navContainer').find('#bs-navbar').hasClass('in');
+        console.log($('#navContainer').find('#bs-navbar'));
+        console.log(isShow);
+        if (isShow) {
+            $('#navContainer').css('height', 0 + 'px');
+        } else {
+            $('#navContainer').css('height', document.body.offsetHeight + 'px');
+        }
     })
 
 })
