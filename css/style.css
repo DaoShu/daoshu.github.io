@@ -58,7 +58,7 @@ nav ul li {
 
 .navbar-show,
 .navbar-collapse {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 nav ul li a {
@@ -397,7 +397,11 @@ nav ul li:hover a {
 
 /* main advantage end */
 /* main customers start */
-.customers-box li {}
+.customers .col-xs-4 {
+    display: inline-block;
+    margin-left: -4px;
+    float: none;
+}
 
 /* main customers end */
 /* footer start */
@@ -435,7 +439,8 @@ nav ul li:hover a {
 }
 
 .code img {
-    font-size: 70px;
+    width: 70px;
+    margin-bottom: 5px;
 }
 
 .footer .contact {
@@ -455,6 +460,19 @@ nav ul li:hover a {
 }
 
 /* footer end */
+@media (max-width: 768px) {
+    header .container {
+        width: 50%;
+        margin: 0;
+        float: right;
+    }
+    nav ul li {
+        padding: 8px 0;
+    }
+ 
+}
+
+
 /* 768888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 @media (min-width: 768px) {
     .pad-l-10 {
@@ -694,5 +712,38 @@ nav ul li:hover a {
 @media (max-width: 480px) {
     .banner-text-content p:nth-child(1) {
         font-size: 16px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+    .section-title h4 span:nth-child(1) {
+        font-size: 18px;
+    }
+    .section-title h4 span:nth-child(2) {
+        font-size: 13px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .visiton .col-xs-3 p:last-child {
+        font-size: 0.9em;
+    }
+    .visiton .col-xs-3 p:first-child {
+        font-size: 2.5em;
+    }
+    .banner-text-content p:nth-child(1) {
+        font-size: 14px;
+    }
+    .banner-content .btn-more {
+        width: 84px;
+        height: 18px;
+        line-height: 16px;
+        font-size: 0.6em;
+    }
+    .btn-more {
+        width: 100px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 0.7em;
     }
 }
