@@ -714,6 +714,9 @@ nav ul li:hover a {
 
 /* 768888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 @media (max-width: 640px) {
+    .main .main-container {
+        width: 100%;
+    }
     .banner-text {
         left: 17%;
         top: 44%;
@@ -732,10 +735,20 @@ nav ul li:hover a {
 }
 
 @media (max-width: 768px) {
-    header .container {
+    header #navContainer {
         width: 50%;
         margin: 0;
         float: right;
+        position: relative;
+        padding: 0;
+    }
+    .navbar-toggle.collapsed{
+        margin-right: 30px;
+    }
+    .navbar-header.navbar-show {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li {
@@ -749,10 +762,9 @@ nav ul li:hover a {
         height: 100% !important;
         transition: unset;
         border: 0 none !important;
-    }
-
-    .banner-content img {
-        transform: scale(1.4);
+        width: 100%;
+        right: 0;
+        left: 15px;
     }
 
     .banner-content {
