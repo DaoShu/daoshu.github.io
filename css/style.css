@@ -34,7 +34,7 @@ header {
 
 .logo {
     position: absolute;
-    left: 10.5%;
+    left: 5%;
     top: 0px;
     width: 120px;
     z-index: 9;
@@ -48,6 +48,11 @@ nav ul li {
     margin: 0px 10px;
     cursor: pointer;
     font-size: 14px;
+}
+
+#bs-navbar {
+    position: absolute;
+    right: 5%;
 }
 
 .navbar-header .navbar-toggle .icon-bar {
@@ -87,14 +92,11 @@ nav ul li:hover a {
     background: #111;
 }
 
-.banner-content {
-    position: relative;
-}
-
 .banner-text {
     position: absolute;
     left: 20%;
     top: 40%;
+    display: none;
 }
 
 .banner-text-content {
@@ -112,13 +114,52 @@ nav ul li:hover a {
 }
 
 /* header end */
+
+/* banner start */
+.banner-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-box {
+    transition: all .2s;
+}
+
+.banner-box li {
+    width: 100%;
+    float: left;
+}
+
+.switch-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+}
+
+.switch-btn span {
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    background: none;
+    border: 1px solid #929292;
+    cursor: pointer;
+}
+
+.switch-btn .active {
+    border: 0 none;
+    background: #d70c25;
+}
+
+/* banner end */
+
 /* main start */
 .main {
     padding: 20px
 }
 
 .main .main-container {
-    width: 80%;
+    width: 60%;
     margin: 0px auto;
 }
 
@@ -466,10 +507,6 @@ nav ul li:hover a {
         padding-left: 10px;
     }
 
-    .logo {
-        width: 180px;
-    }
-
     .navbar .container {
         position: relative;
     }
@@ -489,9 +526,8 @@ nav ul li:hover a {
         background: none;
     }
 
-    header h1 {
-        float: left;
-        width: 180px;
+    .logo {
+        width: 200px;
     }
 
     .navbar-collapse ul li {
@@ -611,9 +647,8 @@ nav ul li:hover a {
 
 /* 768888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 @media (min-width: 992px) {
-    header h1 {
-        float: left;
-        width: 200px;
+    .logo {
+        width: 220px;
     }
 
     .about p {

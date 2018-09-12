@@ -44,6 +44,27 @@ $(function () {
         }
     })
 
+    $('.banner-box li').css('width', document.body.offsetWidth + 'px');
+    $('.banner-box').css('width', document.body.offsetWidth * 2 + 'px');
+
+    var timer = null;
+
+    function banner(i) {
+        clearInterval(timer)
+        var l = i ? -document.body.offsetWidth : 0;
+        $('.banner-box').css('transform', 'translateX(' + l + 'px)');
+        $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
+        timer = setTimeout(() => {
+            banner(!i ? 1 : 0);
+        }, 5000)
+    }
+    banner(0);
+    $('.switch-btn span').on('click', function () {
+        banner($(this).index());
+        // $(this).index
+        // console.log($(this).index())
+        // $(this).addClass('active').siblings().removeClass('active');
+    })
 })
 
 /* 产品的滑动 */

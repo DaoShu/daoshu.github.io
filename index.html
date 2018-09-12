@@ -16,14 +16,14 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="logo img-responsive">
             <img class="img-responsive center-block" src="./img/logo.png" alt="LOGO">
         </h1>
     </div>
 
     <header class="navbar navbar-static-top bs-docs-nav" id="top">
-        <div class="container" id="navContainer">
+        <div class="container-fluid" id="navContainer">
             <div class="navbar-header">
                 <button class="navbar-toggle" id="navToggleBtn" type="button" data-toggle="collapse" data-target="#bs-navbar"
                     aria-controls="bs-navbar" aria-expanded="true">
@@ -46,16 +46,25 @@
         </div>
     </header>
 
-    <section class="banner">
-        <div class="banner-content img-responsive">
-            <img class="img-responsive center-block" src="./img/banner_1.png" alt="上科banner图片">
-            <div class="banner-text">
-                <div class="banner-text-content">
-                    <p>专注高精度矫直机</p>
-                    <p class="hidden-xs">Focus on high-precision straightener</p>
-                </div>
-                <div class="btn-more">探索更多</div>
+    <section class="banner-content img-responsive clearfix">
+        <ul class="banner-box clearfix">
+            <li>
+                <a href="javascript:;"><img class="center-block" src="./img/banner_1.png" alt="上科banner图片"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img class="center-block" src="./img/banner_2.png" alt="上科banner图片"></a>
+            </li>
+        </ul>
+        <div class="switch-btn">
+            <span class="active"></span>
+            <span></span>
+        </div>
+        <div class="banner-text">
+            <div class="banner-text-content">
+                <p>专注高精度矫直机</p>
+                <p class="hidden-xs">Focus on high-precision straightener</p>
             </div>
+            <div class="btn-more">探索更多</div>
         </div>
     </section>
     <section class="main about">
