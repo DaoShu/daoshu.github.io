@@ -1,7 +1,4 @@
 /* 主色 #d70c25*/
-body {
-    height: 1800px;
-}
 
 /* common start */
 p.text-indent {
@@ -451,7 +448,7 @@ nav ul li:hover a {
 }
 
 .footer .row {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding: 15px 0;
 }

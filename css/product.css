@@ -1,0 +1,24 @@
+.logo {
+    position: static;
+    margin-left: 5%;
+}
+
+.product-container {
+    width: 90%;
+    margin: 20px auto;
+}
+.product-container .main-container {
+    display: flex;
+}
+.product-left {
+    width: 220px;
+    height: 500px;
+    background: #ccc;
+}
+
+.product-right {
+    margin-left: 10px;
+    flex: 1;
+    height: 500px;
+    background: #ccc;
+}

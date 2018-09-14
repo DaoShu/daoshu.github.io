@@ -1,4 +1,22 @@
 $(function () {
+    // 控制手机版本的时候，导航按钮的样式;
+    appNavBtn()
+
+    // banner 轮播 切换
+    bannerSlider();
+
+    /* 产品的滑动 */
+    slideSection();
+
+    // 手机版的导航高度撑满屏幕
+    appNavHeight()
+
+    // 浏览器尺寸发送改变时
+    resize()
+
+})
+
+function appNavBtn() {
     $('#navToggleBtn').click(function () {
         if (!$('#bs-navbar').hasClass('in')) {
             $('.navbar-header').addClass('navbar-show');
@@ -8,59 +26,7 @@ $(function () {
             $('#navToggleBtn .icon-bar').css('background', '#444');
         }
     })
-
-    $('.switch-tab').on('click', '.tab-item', function () {
-        $(this).addClass('active').siblings().removeClass('active');
-    })
-
-    /* 产品的滑动 */
-    slideSection();
-
-
-
-    $(window).on('resize', function () {
-        var box = $('.product-slider-box');
-        if (document.body.offsetWidth < 768) {
-            box.css('width', 'auto');
-            return
-        };
-        var container = $('#productBox');
-        var item = box.find('.product-box-item');
-        var productWidht = +((container.width() / 3).toFixed(2));
-        box.css('width', productWidht * item.length + 'px');
-        item.css('width', productWidht);
-    })
-
-
-    // 手机版的导航高度撑满屏幕
-    $('#navToggleBtn').on('click', function () {
-        var isShow = $('#navContainer').find('#bs-navbar').hasClass('in');
-        if (isShow) {
-            $('#navContainer').css('height', 0 + 'px');
-        } else {
-            $('#navContainer').css('height', document.body.offsetHeight + 'px');
-        }
-    })
-
-    $('.banner-box li').css('width', document.body.offsetWidth + 'px');
-    $('.banner-box').css('width', document.body.offsetWidth * 2 + 'px');
-
-    var timer = null;
-
-    function banner(i) {
-        clearInterval(timer)
-        var l = i ? -document.body.offsetWidth : 0;
-        $('.banner-box').css('transform', 'translateX(' + l + 'px)');
-        $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
-        timer = setTimeout(() => {
-            banner(!i ? 1 : 0);
-        }, 5000)
-    }
-    banner(0);
-    $('.switch-btn span').on('click', function () {
-        banner($(this).index());
-    })
-})
+}
 
 /* 产品的滑动 */
 function slideSection() {
@@ -116,4 +82,55 @@ function slideSection() {
         }
         $('.product-slider-box').css('left', l + 'px')
     }
+}
+
+/* banner 轮播 */
+function bannerSlider() {
+    console.log('bannerSlider');
+    $('.banner-box li').css('width', document.body.offsetWidth + 'px');
+    $('.banner-box').css('width', document.body.offsetWidth * $('.banner-box li').length + 'px');
+
+    var timer = null;
+
+    function banner(i) {
+        clearInterval(timer)
+        var l = i * -document.body.offsetWidth;
+        $('.banner-box').css('transform', 'translateX(' + l + 'px)');
+        $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
+        timer = setTimeout(() => {
+            banner(i >= li.length ? 0 : i++);
+        }, 5000)
+    }
+    banner(0);
+    $('.switch-btn span').on('click', function () {
+        banner($(this).index());
+    })
+}
+
+// 手机版的导航高度撑满屏幕
+function appNavHeight() {
+    $('#navToggleBtn').on('click', function () {
+        var isShow = $('#navContainer').find('#bs-navbar').hasClass('in');
+        if (isShow) {
+            $('#navContainer').css('height', 0 + 'px');
+        } else {
+            $('#navContainer').css('height', document.body.offsetHeight + 'px');
+        }
+    })
+}
+
+// 浏览器尺寸发送改变时
+function resize() {
+    $(window).on('resize', function () {
+        var box = $('.product-slider-box');
+        if (document.body.offsetWidth < 768) {
+            box.css('width', 'auto');
+            return
+        };
+        var container = $('#productBox');
+        var item = box.find('.product-box-item');
+        var productWidht = +((container.width() / 3).toFixed(2));
+        box.css('width', productWidht * item.length + 'px');
+        item.css('width', productWidht);
+    })
 }
