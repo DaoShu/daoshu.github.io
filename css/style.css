@@ -131,7 +131,7 @@ nav ul li:hover a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10%;
+    bottom: 9%;
 }
 
 .switch-btn span {
@@ -514,10 +514,12 @@ nav ul li:hover a {
         top: 30px;
     }
 
+
     .navbar-collapse ul li {
         border-bottom: 3px solid rgba(0, 0, 0, 0);
     }
 
+    .navbar-collapse ul li.active,
     .navbar-collapse ul li:hover {
         border-bottom: 3px solid #d70c25;
         background: none;
@@ -770,9 +772,14 @@ nav ul li:hover a {
     .banner-content {
         height: 205px;
     }
+
+    .switch-btn {
+        bottom: 40px;
+    }
 }
 
 @media (max-width: 480px) {
+
     .banner-text-content p:nth-child(1) {
         font-size: 16px;
     }

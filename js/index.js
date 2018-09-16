@@ -2,13 +2,21 @@ $(function () {
     // 控制手机版本的时候，导航按钮的样式;
     appNavBtn()
 
+    console.log(window.location.href.indexOf('index'));
     // 首页的js
     if (window.location.href.indexOf('index') > 0) {
         // banner 轮播 切换
-        bannerSlider();
+        // bannerSlider();
+
+
 
         /* 产品的滑动 */
         slideSection();
+        var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
+        img.on('load', function () {
+            console.log('load');
+            bannerSlider();
+        })
     }
 
     // 手机版的导航高度撑满屏幕
@@ -16,6 +24,9 @@ $(function () {
 
     // 浏览器尺寸发送改变时
     resize()
+
+    // 选项卡切换
+    tabSwitch();
 
 })
 
@@ -134,5 +145,12 @@ function resize() {
         var productWidht = +((container.width() / 3).toFixed(2));
         box.css('width', productWidht * item.length + 'px');
         item.css('width', productWidht);
+    })
+}
+
+/* 选项卡切换 */
+function tabSwitch() {
+    $('.tab-switch-btn').on('click', function () {
+        $(this).add('active').siblings().removeClass('active');
     })
 }
