@@ -773,9 +773,9 @@ nav ul li:hover a {
         height: 205px;
     }
 
-    .switch-btn {
+    /* .switch-btn {
         bottom: 40px;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
