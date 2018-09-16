@@ -2,11 +2,14 @@ $(function () {
     // 控制手机版本的时候，导航按钮的样式;
     appNavBtn()
 
-    // banner 轮播 切换
-    bannerSlider();
+    // 首页的js
+    if (window.location.href.indexOf('index') > 0) {
+        // banner 轮播 切换
+        bannerSlider();
 
-    /* 产品的滑动 */
-    slideSection();
+        /* 产品的滑动 */
+        slideSection();
+    }
 
     // 手机版的导航高度撑满屏幕
     appNavHeight()
@@ -86,7 +89,6 @@ function slideSection() {
 
 /* banner 轮播 */
 function bannerSlider() {
-    console.log('bannerSlider');
     $('.banner-box li').css('width', document.body.offsetWidth + 'px');
     $('.banner-box').css('width', document.body.offsetWidth * $('.banner-box li').length + 'px');
 
@@ -98,7 +100,7 @@ function bannerSlider() {
         $('.banner-box').css('transform', 'translateX(' + l + 'px)');
         $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
         timer = setTimeout(() => {
-            banner(i >= li.length ? 0 : i++);
+            banner(i != $('.banner-box li').length - 1 ? i + 1 : 0);
         }, 5000)
     }
     banner(0);

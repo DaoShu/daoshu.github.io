@@ -511,7 +511,7 @@ nav ul li:hover a {
     .navbar-collapse {
         position: absolute;
         right: 0;
-        top: 20px;
+        top: 30px;
     }
 
     .navbar-collapse ul li {
@@ -714,6 +714,7 @@ nav ul li:hover a {
     .main .main-container {
         width: 100%;
     }
+
     .banner-text {
         left: 17%;
         top: 44%;
@@ -739,9 +740,11 @@ nav ul li:hover a {
         position: relative;
         padding: 0;
     }
-    .navbar-toggle.collapsed{
+
+    .navbar-toggle.collapsed {
         margin-right: 30px;
     }
+
     .navbar-header.navbar-show {
         width: 100%;
         margin: 0;
@@ -774,8 +777,22 @@ nav ul li:hover a {
         font-size: 16px;
     }
 
+    .switch-tab .tab-item {
+        padding: 2px 5px;
+    }
+
     .footer {
         font-size: 12px;
+    }
+
+    .footer ul {
+        margin-bottom: 10px;
+    }
+
+    .footer nav li {
+        margin-right: 10px;
+        margin-bottom: 5px;
+        text-indent: 0;
     }
 
     .section-title h4 span:nth-child(1) {
