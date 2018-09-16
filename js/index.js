@@ -2,20 +2,16 @@ $(function () {
     // 控制手机版本的时候，导航按钮的样式;
     appNavBtn()
 
-    console.log(window.location.href.indexOf('index'));
     // 首页的js
     if (window.location.href.indexOf('index') > 0) {
-        // banner 轮播 切换
-        // bannerSlider();
-
-
-
         /* 产品的滑动 */
         slideSection();
         var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
         img.on('load', function () {
-            console.log('load');
-            bannerSlider();
+            // banner 轮播 切换
+            setTimeout(() => {
+                bannerSlider();
+            }, 2000);
         })
     }
 
