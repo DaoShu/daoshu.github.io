@@ -3,16 +3,31 @@ $(function () {
     appNavBtn()
 
     // 首页的js
-    if (window.location.href.indexOf('index') > 0) {
+    var url = window.location.href;
+    if (url.indexOf('index') >= 0 || url.indexOf('html') < 0) {
         /* 产品的滑动 */
         slideSection();
-        var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
-        img.on('load', function () {
-            // banner 轮播 切换
-            setTimeout(() => {
+        setTimeout(function () {
+            var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
+            img[0].onload = function () {
+                console.log(img);
+                // banner 轮播 切换
+
+            };
+            setTimeout(function () {
+                console.log(bannerSlider);
                 bannerSlider();
-            }, 2000);
-        })
+            }, 1000);
+            // }
+            // img.on('load', function () {
+            //     console.log(img);
+            //     // banner 轮播 切换
+            //     setTimeout(function () {
+            //         console.log(bannerSlider);
+            //         bannerSlider();
+            //     }, 1000);
+            // })
+        }, 2000);
     }
 
     // 手机版的导航高度撑满屏幕
