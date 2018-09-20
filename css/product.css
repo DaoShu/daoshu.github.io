@@ -1,6 +1,5 @@
 .logo {
-    position: static;
-    margin-left: 5%;
+    position: relative;
 }
 
 .header-logo {
@@ -8,7 +7,6 @@
 }
 
 body {
-
     background: #efefef;
 }
 
@@ -85,7 +83,6 @@ body {
     opacity: 1;
     width: 100%;
     height: 100%;
-
 }
 
 .p-item:hover .item-hover .btn-more {
@@ -125,33 +122,26 @@ body {
     transition: all .3s ease-in-out;
 }
 
-
-
 @media (max-width: 768px) {
     body {
         background: #fff;
     }
-
     .product-container {
         width: 100%;
     }
-
     .visible-xs-block .xs-title {
         line-height: 50px;
         font-size: 20px;
         text-indent: 8%;
         background: #efefef;
     }
-
     .visible-xs-block .col-xs-12 p {
         text-align: center;
     }
-
     .xs-tab-btn {
         text-align: center;
         margin: 1em 0;
     }
-
     .xs-tab-btn span {
         display: inline-block;
         border: 1px solid #ddd;
@@ -161,7 +151,6 @@ body {
         cursor: pointer;
         margin-right: 10px;
     }
-
     .xs-tab-btn span:hover,
     .xs-tab-btn span.active {
         opacity: 1;
@@ -183,11 +172,9 @@ body {
         cursor: pointer;
         margin-right: 8px;
     }
-    .visible-xs-block .col-xs-12 p{
+    .visible-xs-block .col-xs-12 p {
         font-size: 14px;
     }
-
 }
-@media (max-width: 320px) {
 
-}
+@media (max-width: 320px) {}

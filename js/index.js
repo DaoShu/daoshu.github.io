@@ -7,27 +7,26 @@ $(function () {
     if (url.indexOf('index') >= 0 || url.indexOf('html') < 0) {
         /* 产品的滑动 */
         slideSection();
-        setTimeout(function () {
-            var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
-            img[0].onload = function () {
-                console.log(img);
-                // banner 轮播 切换
+        // setTimeout(function () {
+        // var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
+        // img[0].onload = function () {
+        //     console.log(img);
+        //     // banner 轮播 切换
 
-            };
-            setTimeout(function () {
-                console.log(bannerSlider);
-                bannerSlider();
-            }, 1000);
-            // }
-            // img.on('load', function () {
-            //     console.log(img);
-            //     // banner 轮播 切换
-            //     setTimeout(function () {
-            //         console.log(bannerSlider);
-            //         bannerSlider();
-            //     }, 1000);
-            // })
-        }, 2000);
+        // };
+        setTimeout(function () {
+            bannerSlider();
+        }, 1000);
+        // }
+        // img.on('load', function () {
+        //     console.log(img);
+        //     // banner 轮播 切换
+        //     setTimeout(function () {
+        //         console.log(bannerSlider);
+        //         bannerSlider();
+        //     }, 1000);
+        // })
+        // }, 2000);
     }
 
     // 手机版的导航高度撑满屏幕
@@ -138,7 +137,7 @@ function appNavHeight() {
         if (isShow) {
             $('#navContainer').css('height', 0 + 'px');
         } else {
-            $('#navContainer').css('height', document.body.offsetHeight + 'px');
+            $('#navContainer').css('height', window.screen.height + 'px');
         }
     })
 }

@@ -30,6 +30,7 @@ header {
     top: 0;
     z-index: 1;
     width: 100%;
+    /* overflow: hidden; */
 }
 
 .logo {
@@ -37,7 +38,7 @@ header {
     left: 5%;
     top: 0px;
     width: 120px;
-    z-index: 9;
+    z-index: 100001;
 }
 
 .navbar {
@@ -711,7 +712,8 @@ nav ul li:hover a {
         width: 50%;
         margin: 0;
         float: right;
-        position: relative;
+        position: fixed;
+        right: 0;
         padding: 0;
     }
     .logo {

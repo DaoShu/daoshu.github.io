@@ -108,4 +108,19 @@
     .company-overview .details-title {
         text-align: center;
     }
+    .about-content {
+        width: 80% !important;
+    }
+    .compeny-product .pull-right {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        top: 90px;
+    }
+    .overview-des .col-xs-4 p:nth-child(1) {
+        font-size: 28px;
+    }
 }
