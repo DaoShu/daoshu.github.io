@@ -30,6 +30,11 @@ $(function () {
     // 选项卡切换
     tabSwitch();
 
+    // 联系方式的悬浮框
+    contactBtn()
+
+    // 返回顶部
+    backTop();
 })
 
 function appNavBtn() {
@@ -155,4 +160,35 @@ function tabSwitch() {
     $('.tab-switch-btn').on('click', function () {
         $(this).add('active').siblings().removeClass('active');
     })
+}
+
+/* 联系方式的悬浮框 */
+function contactBtn() {
+    $('.contact-btn').on('click', function () {
+        var box = $(this).closest('.contact');
+        var _this = $(this);
+        if (box.css('right').indexOf('-') < 0) {
+            box.animate({
+                'right': '-190px'
+            }, 300, function () {
+                _this.css('transform', ' rotateY(180deg)');
+            })
+        } else {
+            box.animate({
+                'right': '0px'
+            }, 300, function () {
+                _this.css('transform', ' rotateY(0deg)');
+            })
+        }
+    })
+}
+
+/* 返回顶部 */
+function backTop() {
+    $('.back-top').on('click', function () {
+        console.log(111)
+        $('html,body').stop().animate({
+            scrollTop: '0px'
+        }, 600);
+    });
 }
