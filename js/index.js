@@ -7,6 +7,9 @@ $(function () {
     if (url.indexOf('index') >= 0 || url.indexOf('html') < 0) {
         /* 产品的滑动 */
         slideSection();
+
+        var bodyWidth = document.body.offsetWidth;
+        $('.banner-box li').css('width', bodyWidth + 'px')
         // setTimeout(function () {
         // var img = $('.first-img-xs').length ? $('.first-img-xs') : $('.first-img-sm')
         // img[0].onload = function () {
@@ -14,19 +17,8 @@ $(function () {
         //     // banner 轮播 切换
 
         // };
-        setTimeout(function () {
-            bannerSlider();
-        }, 1000);
+        bannerSlider();
         // }
-        // img.on('load', function () {
-        //     console.log(img);
-        //     // banner 轮播 切换
-        //     setTimeout(function () {
-        //         console.log(bannerSlider);
-        //         bannerSlider();
-        //     }, 1000);
-        // })
-        // }, 2000);
     }
 
     // 手机版的导航高度撑满屏幕
@@ -120,9 +112,9 @@ function bannerSlider() {
         var l = i * -document.body.offsetWidth;
         $('.banner-box').css('transform', 'translateX(' + l + 'px)');
         $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
-        timer = setTimeout(() => {
+        timer = setTimeout(function () {
             banner(i != $('.banner-box li').length - 1 ? i + 1 : 0);
-        }, 5000)
+        }, 4000)
     }
     banner(0);
     $('.switch-btn span').on('click', function () {
