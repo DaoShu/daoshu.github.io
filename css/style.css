@@ -359,7 +359,7 @@ nav ul li:hover a {
 }
 
 .visiton .col-xs-3 p:first-child {
-    padding-top: 18px;
+    padding-top: 20px;
     font-size: 2.8em;
 }
 
@@ -656,7 +656,7 @@ nav ul li:hover a {
     }
 
     .visiton .col-xs-3 p:first-child {
-        padding-top: 10px;
+        padding-top: 24px;
     }
 
     .visiton-text .col-sm-6:nth-child(2) .text-content {
