@@ -1,0 +1,85 @@
+.container-fluid {
+    width: 90%;
+}
+
+.info-bg {
+    margin-bottom: 50px;
+}
+
+.icon-time {
+    background: url(../img/infomation/info_time.png) no-repeat 50% 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-size: 80%;
+}
+
+.info-box {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+}
+
+.info-box .col-xs-7 {
+    padding: 0 10px;
+}
+
+.info-box .col-xs-7,
+.info-box .col-xs-5 {
+    cursor: pointer;
+}
+
+.info-box .time i,
+.info-box .time span {
+    vertical-align: middle;
+
+}
+
+.info-box .time span {
+    padding-left: 5px;
+}
+
+.info-box h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.info-box .col-xs-7 {
+    padding-left: 20px;
+}
+
+.info-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #999;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .container-fluid {
+        width: 65%;
+    }
+
+    .footer {
+        margin-top: 50px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #999;
+    }
+
+    .info-box h4 {
+        padding-top: 20px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .info-box .col-xs-7 {
+        padding-left: 40px;
+    }
+}

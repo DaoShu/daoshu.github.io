@@ -1,0 +1,59 @@
+.contact-content * {
+    color: #444 !important;
+}
+
+.contact-content h4 {
+    text-align: center;
+}
+
+.form-left {
+    float: left;
+}
+
+.form-right {
+    float: right;
+}
+
+.form-sec p:nth-child(2) span {
+    color: #d70c25;
+}
+
+.form-contact {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.form-contact span {
+    color: #d70c25 !important;
+    margin: 0 3px;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {}
+
+/* PC端 */
+
+@media (min-width:768px) {
+    .contact-content h4 {
+        margin: 40px 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    .form-sec p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .form-sec p:nth-child(2) {
+        font-size: 22px;
+    }
+    .form-sec p:nth-child(3) {
+        font-size: 14px;
+    }
+    .form-contact {
+        font-size: 14px;
+    }
+    
+}

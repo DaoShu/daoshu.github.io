@@ -31,11 +31,11 @@
 }
 
 .about-context .about-txt {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
     margin-top: 10px;
     text-align: left;
     text-indent: 2em;
+    color: #999;
 }
 
 .overview-des {
@@ -53,6 +53,7 @@
 
 .overview-des .col-xs-4 p:nth-child(2) {
     font-size: 14px;
+    color: #999;
 }
 
 .company-pic-box {
@@ -70,6 +71,7 @@
 
 .company-overview .details-txt {
     font-size: 14px;
+    color: #999;
 }
 
 .company-details {
@@ -77,28 +79,38 @@
     border-bottom: 1px solid #ddd;
 }
 
+.company-vision .about-txt {
+    text-indent: 0;
+}
+
 @media (max-width: 992px) {
     .about-content {
         padding: 0 5% 50px;
     }
+
     .about-context {
         padding-top: 40px;
         /* padding: 0 5% 50px; */
     }
+
     .about-context h4 {
         font-size: 20px;
     }
+
     .about-context .title-sec,
     .about-context .about-txt,
     .company-overview .details-txt {
-        font-size: 12px
+        font-size: 14px
     }
+
     .overview-des .col-xs-4 p:nth-child(1) {
         font-size: 40px;
     }
+
     .overview-des .col-xs-4 p:nth-child(2) {
         font-size: 12px;
     }
+
     .company-overview .details-title {
         font-size: 16px;
     }
@@ -108,9 +120,17 @@
     .company-overview .details-title {
         text-align: center;
     }
+
+    .about-context .title-sec,
+    .about-context .about-txt,
+    .company-overview .details-txt {
+        line-height: 24px;
+    }
+
     .about-content {
         width: 80% !important;
     }
+
     .compeny-product .pull-right {
         margin-bottom: 10px;
     }
@@ -120,7 +140,26 @@
     .about-container {
         top: 90px;
     }
+
     .overview-des .col-xs-4 p:nth-child(1) {
         font-size: 28px;
     }
+}
+
+/* PC端 */
+@media (min-width:768px) {
+    .about-content {
+        width: 65% !important;
+    }
+
+    .company-overview .details-txt {
+        font-size: 16px;
+        padding-right: 4em;
+        line-height: 28px;
+    }
+
+    .about-context .about-txt {
+        line-height: 28px;
+    }
+
 }
