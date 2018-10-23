@@ -55,11 +55,9 @@
         </div>
     </section>
 
-    <section class="contact-content main-container sk-container">
+    <section class="contact-content main-container">
         <div class="row">
             <h4 class="col-xs-12">Hello!您好</h4>
-        </div>
-        <div class="row">
             <div class="contact-form clearfix">
                 <div class="form-left">
                     <div class="form-sec">
@@ -75,9 +73,22 @@
                 </div>
                 <div class="form-right">
                     <form action="#">
-                        div.form
+                        <div class="form-input">
+                            <input class="" type="text" name="name" placeholder="您的姓名">
+                            <input class="" type="text" name="tel" placeholder="您的手机">
+                            <input class="" type="text" name="email" placeholder="您的邮箱">
+                        </div>
+                        <div class="from-textarea">
+                            <textarea class="col-xs-12" name="" id="" placeholder="填写您的疑问"></textarea>
+                        </div>
+                        <div class="form-footer">
+                            <button class="form-commit">提交</button>
+                        </div>
                     </form>
                 </div>
+            </div>
+            <div class="contact-map col-xs-12">
+                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -128,10 +139,11 @@
     </div>
     <div class="back-top"> </div>
 </body>
-
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=e108WswoZc2nHVed8LymS7PsRB3sl5IE"></script>
 <script src="
                         ./js/jquery-1.10.2.min.js"> </script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/map.js"></script>
 
 </html>

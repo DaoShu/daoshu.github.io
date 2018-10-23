@@ -637,7 +637,8 @@ nav ul li:hover a {
     background-size: 70%;
     background-color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-    transition: all .2 ease-in-out;
+    transition: all .1s ease-in-out;
+    display: none;
 }
 
 .footer .footer-contact {

@@ -185,8 +185,16 @@ function contactBtn() {
 
 /* 返回顶部 */
 function backTop() {
+    var dom = $('.back-top');
+    $(window).on('scroll', function () {
+        var scrollTo = $(window).scrollTop(),
+            docHeight = $(document).height(),
+            windowHeight = $(window).height(),
+            scrollPercent = ((scrollTo / (docHeight - windowHeight)) * 100).toFixed(1);
+        dom.css('display', scrollPercent > 20 ? 'block' : 'none');
+    }).trigger('scroll')
+
     $('.back-top').on('click', function () {
-        console.log(111)
         $('html,body').stop().animate({
             scrollTop: '0px'
         }, 600);
