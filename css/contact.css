@@ -125,6 +125,8 @@
     margin-top: 0;
 }
 
+/* PC端 */
+
 @media (min-width: 768px) {
     .contact-content h4 {
         margin: 30px 0;
@@ -136,9 +138,11 @@
         flex-flow: row
     }
     .form-left {
+        width: 290px;
         min-width: 290px;
     }
     .form-right {
+        margin-top: 0;
         flex: 1;
     }
     .form-sec p {
@@ -162,7 +166,7 @@
         font-size: 12px;
     }
     .from-textarea {
-        height: 80px;
+        height: 100px;
         font-size: 12px;
     }
     .form-right input {
@@ -176,8 +180,6 @@
 
 @media (max-width: 480px) {}
 
-/* PC端 */
-
 @media (min-width:1200px) {
     .contact-content h4 {
         margin: 40px 0;
@@ -185,6 +187,7 @@
         letter-spacing: 1px;
     }
     .form-left {
+        min-width: 420px;
         min-width: 420px;
     }
     .form-sec p {

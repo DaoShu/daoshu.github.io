@@ -581,13 +581,13 @@ nav ul li:hover a {
     position: absolute;
     background-color: #d70c25;
     left: -40px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background-image: url(../img/arrows.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     cursor: pointer;
-    background-size: 45%;
+    background-size: 40%;
 }
 
 .contact-info {
@@ -849,6 +849,11 @@ nav ul li:hover a {
     .footer .code p {
         font-size: 16px;
     }
+    .contact-btn { 
+        width: 40px;
+        height: 40px;
+        background-size: 45%;
+    }
 }
 
 /* 999999999999999999999999999999999999999999999992 */
@@ -1099,6 +1104,7 @@ nav ul li:hover a {
         line-height: 20px;
         font-size: 0.7em;
     }
+  
 }
 
 @media (max-width: 320px) {
