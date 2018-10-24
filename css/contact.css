@@ -9,7 +9,7 @@
 .contact-content h4 {
     text-align: center;
     margin: 20px 0px 50px 0px;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 1px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .form-sec p:nth-child(2) {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .form-sec p:nth-child(3) {
@@ -135,7 +135,8 @@
     }
     .contact-form {
         display: flex;
-        flex-flow: row
+        flex-flow: row;
+        width: 65%;
     }
     .form-left {
         width: 290px;
@@ -187,15 +188,15 @@
         letter-spacing: 1px;
     }
     .form-left {
-        min-width: 420px;
-        min-width: 420px;
+        min-width: 440px;
+        min-width: 440px;
     }
     .form-sec p {
         font-size: 18px;
         line-height: 30px;
     }
     .form-sec p:nth-child(2) {
-        font-size: 22px;
+        font-size: 24px;
     }
     .form-sec p:nth-child(3) {
         font-size: 14px;
