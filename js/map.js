@@ -1,3 +1,4 @@
+console.log(BMap)
 var map = new BMap.Map("map");    // 创建Map实例
 
 var point = new BMap.Point(125.245034, 43.83664);
