@@ -44,6 +44,7 @@ body {
 .product-list li {
     line-height: 36px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .product-list li.active,
@@ -52,6 +53,7 @@ body {
 }
 
 .product-right {
+    min-height: 300px;
     margin-left: 20px;
     flex: 1;
 }

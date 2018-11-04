@@ -39,8 +39,9 @@
                 <ul class="clearfix">
                     <li><a href="./index.html">首页</a></li>
                     <li class="active"><a href="./product.html">产品</a></li>
-                    <li><a href="javascript:;">技术</a></li>
-                    <li><a href="javascript:;">方案</a></li><li><a href="./patents.html">专利</a></li>
+                    <li><a href="./technology.html">技术</a></li>
+                    <li><a href="./scheme.html">方案</a></li>
+                    <li><a href="./patents.html">专利</a></li>
                     <li><a href="./information.html">资讯</a></li>
                     <li><a href="./about.html">关于</a></li>
                     <li><a href="./contact.html">联系</a></li>
@@ -54,13 +55,14 @@
             <div class="product-left">
                 <h4>上科矫直机系列</h4>
                 <ul class="product-list">
-                    <li class="active"><a href="javascript:;">自动矫直机</a></li>
-                    <li><a href="javascript:;">自动压装机</a></li>
-                    <li><a href="javascript:;">热矫直机</a></li>
+                    <li data-index='1' class="active"><a href="javascript:;">自动矫直机</a></a></li>
+                    <li data-index='2'><a href="javascript:;">自动压装机</a></a></li>
+                    <li data-index='3'><a href="javascript:;">热矫直机</a></a></li>
+                    <li data-index='4'><a href="javascript:;">视频展示</a></a></li>
                 </ul>
             </div>
             <div class="product-right">
-                <ul class="clearfix">
+                <ul class="clearfix show" id="tabBody1">
                     <li class="p-item">
                         <div class="img-responsive">
                             <img class="center-block" src="./img/product/p__1.png" alt="">
@@ -127,6 +129,26 @@
                         </div>
                     </li>
                 </ul>
+                <ul class="clearfix hide" id="tabBody2">
+                    <li>自动压装机</li>
+                </ul>
+                <ul class="clearfix hide" id="tabBody3">
+                    <li>热矫直机</li>
+                </ul>
+                <ul class="clearfix hide" id="tabBody4">
+                    <!-- <li class="p-item">
+                        <iframe src="http://player.youku.com/embed/XMzU0NTI1NTg2NA==" width="100%" height="298"
+                            frameborder="0"></iframe>
+                    </li>
+                    <li class="p-item">
+                        <iframe src="http://player.youku.com/embed/XMzU0NTIwNjQwOA==" width="100%" height="298"
+                            frameborder="0"></iframe>
+                    </li>
+                    <li class="p-item">
+                        <iframe src="http://player.youku.com/embed/XMzU0NTE4OTA5Mg==" width="100%" height="298"
+                            frameborder="0"></iframe>
+                    </li> -->
+                </ul>
             </div>
         </div>
         <div class="main-container visible-xs-block">
@@ -171,8 +193,9 @@
                     <ul class="clearfix">
                         <li><a href="./index.html">首页</a></li>
                         <li><a href="./product.html">产品</a></li>
-                        <li><a href="javascript:;">技术</a></li>
-                        <li><a href="javascript:;">方案</a></li><li><a href="./patents.html">专利</a></li>
+                        <li><a href="./technology.html">技术</a></li>
+                        <li><a href="./scheme.html">方案</a></li>
+                        <li><a href="./patents.html">专利</a></li>
                         <li><a href="javascript:;">资讯</a></li>
                         <li><a href="./about.html">关于</a></li>
                         <li><a href="./contact.html">联系</a></li>
@@ -210,9 +233,9 @@
     <div class="back-top"> </div>
 </body>
 
-<script src="
-                        ./js/jquery-1.10.2.min.js"> </script>
+<script src="./js/jquery-1.10.2.min.js"> </script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/index.js"></script>
+<script src="./js/product.js"></script>
 
 </html>

@@ -163,7 +163,7 @@ nav ul li:hover a {
 /* main start */
 
 .main {
-    padding-top: 20px;
+    padding-top: 40px;
     margin-top: 30px;
     display: inline-block;
     width: 100%;
@@ -220,7 +220,8 @@ nav ul li:hover a {
 
 .product {
     background-color: #f2f2f2;
-    padding-top: 60px !important;
+    padding-top: 100px !important;
+    padding-bottom: 80px;
 }
 
 .product-box {
@@ -309,8 +310,16 @@ nav ul li:hover a {
     transition: all .2s ease-in-out;
 }
 
+.switch-tab div a {
+    color: #999;
+}
+
 .switch-tab .active {
     background: #d70c25;
+    color: #fff;
+}
+
+.switch-tab .active a {
     color: #fff;
 }
 
@@ -319,15 +328,24 @@ nav ul li:hover a {
     color: #fff;
 }
 
+.switch-tab div:hover a {
+    color: #fff;
+}
+
 .visiton-text .col-xs-12 {
     margin: 20px 0 30px;
     cursor: pointer;
+    transition: box-shadow .36s ease-in-out;
+}
+
+.visiton-text .col-xs-12:hover {
+    box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.04)
 }
 
 .visiton .col-xs-3 {
     position: relative;
     background-color: #999999;
-    height: 102px;
+    height: 108px;
     font-size: 12px;
     color: #fff;
 }
@@ -356,11 +374,12 @@ nav ul li:hover a {
     -webkit-line-clamp: 3;
     height: 72px;
     line-height: 24px;
-    margin-top: 10px;
+    color: #999;
 }
 
+
 .visiton .col-xs-3 p:first-child {
-    padding-top: 20px;
+    padding-top: 30px;
     font-size: 2.8em;
 }
 
@@ -381,6 +400,7 @@ nav ul li:hover a {
     color: #d70c25;
     line-height: 20px;
     height: 20px;
+    margin-bottom: 10px;
 }
 
 .visiton .text-content p:nth-child(2) {
@@ -580,9 +600,9 @@ nav ul li:hover a {
 .contact-btn {
     position: absolute;
     background-color: #d70c25;
-    left: -40px;
+    left: -35px;
     width: 35px;
-    height: 35px;
+    height: 40px;
     background-image: url(../img/arrows.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -650,15 +670,49 @@ nav ul li:hover a {
     margin-bottom: 10px;
 }
 
+/* 分页插件 */
+.pagination li span {
+    color: #999;
+    cursor: pointer;
+}
+
+.pagination .active span,
+.pagination .active span:hover {
+    background: #d70c25;
+    color: #fff;
+    border-color: #d70c25;
+}
+
+/* 分页插件 end*/
+
+
+
 /* 768888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 
 @media (min-width: 768px) {
+    .visiton .text-content p:nth-child(1) {
+        font-size: 20px;
+        margin: 10px 0 15px 0;
+    }
+
+    .visiton .text-content p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    p.text-indent {
+        font-size: 16px !important;
+    }
+
     .footer {
         margin-top: 80px;
     }
 
+    .visiton .col-xs-3 {
+        height: 124px;
+    }
+
     .visiton .col-xs-3 p:first-child {
-        padding-top: 24px;
+        padding-top: 36px;
     }
 
     .visiton-text .col-sm-6:nth-child(2) .text-content {
@@ -666,7 +720,7 @@ nav ul li:hover a {
     }
 
     .main {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     .product {
@@ -849,7 +903,8 @@ nav ul li:hover a {
     .footer .code p {
         font-size: 16px;
     }
-    .contact-btn { 
+
+    .contact-btn {
         width: 40px;
         height: 40px;
         background-size: 45%;
@@ -960,7 +1015,8 @@ nav ul li:hover a {
         background: #888 !important;
     }
 
-    .main .main-container {
+    .main .main-container,
+    .sk-container {
         width: 90%;
     }
 
@@ -982,6 +1038,12 @@ nav ul li:hover a {
 }
 
 @media (max-width: 768px) {
+
+    .main .main-container,
+    .sk-container {
+        width: 90%;
+    }
+
     header #navContainer {
         width: 50%;
         margin: 0;
@@ -1104,7 +1166,7 @@ nav ul li:hover a {
         line-height: 20px;
         font-size: 0.7em;
     }
-  
+
 }
 
 @media (max-width: 320px) {
