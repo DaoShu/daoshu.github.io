@@ -13,15 +13,14 @@
 
     <title>上科官网</title>
     <style>
-        .sk-container img {
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
         .content-txt {
             text-indent: 2em;
         }
         .mar-b-em {
             margin-bottom: 1em;
+        }
+        .text-sec {
+            margin-bottom: 10px;
         }
         .btn-back {
             background: #d70c25;
@@ -35,16 +34,20 @@
         .btn-back:hover {
             background: #bb0a1f;
         }
+        .pad-l {
+            padding-left: 2em;
+        }
+        .details-content p {
+            line-height: 26px;
+            letter-spacing: 1px;
+        }
+
         @media (min-width: 768px) {
             h4 {
                 margin: 50px auto 20px;
                 font-size: 30px;
-                text-align: center
+                text-align: center;
             }
-        }
-         .sk-container p {
-            line-height: 26px;
-            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -73,10 +76,10 @@
                 <ul class="clearfix">
                     <li><a href="../index.html">首页</a></li>
                     <li><a href="../product.html">产品</a></li>
-                    <li class="active"><a href="../technology.html">技术</a></li>
+                    <li><a href="../technology.html">技术</a></li>
                     <li><a href="../scheme.html">方案</a></li>
                     <li><a href="../patents.html">专利</a></li>
-                    <li><a href="../information.html">资讯</a></li>
+                    <li class="active"><a href="../information.html">资讯</a></li>
                     <li><a href="../about.html">关于</a></li>
                     <li><a href="../contact.html">联系</a></li>
                     <!-- <li class="hidden-xs hidden-sm"><a href="javascript:;">English</a></li> -->
@@ -86,26 +89,31 @@
 
     <section class="contact-top">
         <div class="contact-bg">
-            <img class="hidden-xs hidden-sm" src="../img/technology/technology_bg.png" alt="">
-            <img class="visible-xs-block visible-sm-block" src="../img/technology/technology_bg_xs.png" alt="">
+            <img class="hidden-xs hidden-sm" src="../img/infomation/news_banner.png" alt="">
+            <img class="visible-xs-block visible-sm-block" src="../img/infomation/news_banner_xs.png" alt="">
         </div>
     </section>
 
     <section class="contact-content main-container sk-container clearfix">
         <div class="row">
             <div class="details-title">
-                <h4>工件表面误差剔除技术</h4>
+                <h4>校直机控制的自动化</h4>
             </div>
-            <p class="text-center">发布时间：2018-04-12 点击量：327</p>
-            <img class="img-responsive center-block" src="../img/technology/1.png" alt="">
+            <p class="text-center text-sec">发布时间：2018-04-12 点击量：421</p>
             <div class="details-content">
-                <p class="content-txt mar-b-em">Straightener®工件表面误差剔除技术（LSC）</p>
-                　　<p class="content-txt mar-b-em">ASMController控制系统软件集成了针对校直机产品设计的LSC算法，可以有效剔除轴类、管类零件本身的不圆度、毛刺等对测量结果的影响，真实反映零件偏心误差，排除局部缺陷对矫直结果的误判，从而降低废品率。</p>
+                <p class="content-txt mar-b-em">为实现校直机控制的自动化，就校直机控制的自动化系统展开研究，该系统要求具备数据统计、板形自我识别和板形质量控制等功能，设计的目标是实现对来料板形判断和矫直工艺参数选取的自动化，终用该系统来模拟板形矫直熟练工和质量控制专家的日常上作，完成板形检测和对板材质量的控制，将该模型统称为拉伸弯曲校直机自动化控制系统。</p>
+                <p class="content-txt mar-b-em">拉伸弯曲校直机自动化控制系统，需要满足三个功能。</p>
+
+                <div class="mar-b-em">
+                    <p class="pad-l">1）知识获取功能：获取并存储操作人员用于参数选择的经验知识。操作人员是凭借个人经验进行工艺参数选择的。随着各种人工智能算法的发展，可以利用人工智能算法将操作人员的个人经验以一定的数学形式表示，并建立知识库将这些数字化的经验知识存储起来。</p>
+                    <p class="pad-l">2）板形检测功能：实时在线获取校直机出入口板材的平直度信息。随着光学测量技术和图像技术发展，可以通过视频处理技术，从板材表面视频中提取板材平直度信息。</p>
+                    <p class="pad-l">3）参数选择功能：使用存储的经验知识，结合板形检测系统获得的板材平直度数据为待矫直板材选择一组合适的工艺参数。知识库建立以后，根据一定的算法可以得到板材平直度和工艺参数之间的映射关系，使用这个映射关系可以将不同的板材平直度映射到适合该平直度的工艺参数。</p>
+                </div>
+                <p>长春上科，为体现价值而生；</p>
             </div>
-            <img class="img-responsive center-block" src="../img/technology/2.jpg" alt="">
         </div>
 
-        <div class="btn-back pull-right"><a href="../technology.html">返回上一页</a></div>
+        <div class="btn-back pull-right"><a href="../information.html">返回上一页</a></div>
     </section>
 
 
