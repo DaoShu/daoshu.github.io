@@ -4,7 +4,7 @@ $(function () {
         if (ev.target.nodeName == 'A') dom = $(ev.target).parent('li');
         dom.addClass('active').siblings().removeClass('active');
         var index = dom.attr('data-index');
-        $(`#tabBody${index}`).addClass('show').removeClass('hide').siblings().addClass('hide').removeClass(
+        $('#tabBody' + index).addClass('show').removeClass('hide').siblings().addClass('hide').removeClass(
             'show');
     })
 })
