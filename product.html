@@ -54,11 +54,11 @@
         <div class="main-container hidden-xs">
             <div class="product-left">
                 <h4>上科矫直机系列</h4>
-                <ul class="product-list">
-                    <li data-index='1' class="active"><a href="javascript:;">自动矫直机</a></a></li>
-                    <li data-index='2'><a href="javascript:;">自动压装机</a></a></li>
-                    <li data-index='3'><a href="javascript:;">热矫直机</a></a></li>
-                    <li data-index='4'><a href="javascript:;">视频展示</a></a></li>
+                <ul class="product-list tab-list">
+                    <li data-body='tabBody1' class="active"><a href="javascript:;">自动矫直机</a></a></li>
+                    <li data-body='tabBody2'><a href="javascript:;">自动压装机</a></a></li>
+                    <li data-body='tabBody3'><a href="javascript:;">热矫直机</a></a></li>
+                    <li data-body='tabBody4'><a href="javascript:;">视频展示</a></a></li>
                 </ul>
             </div>
             <div class="product-right">
@@ -71,8 +71,10 @@
                         <div class="sign">NEW</div>
                         <div class="item-hover">
                             <div class="item-hover-center">
-                                <p>门型自动校直机</p>
-                                <div class="btn-more">探索更多</div>
+                                <a href="./product-details/product-details-1.html">
+                                    <p>门型自动校直机</p>
+                                    <div class="btn-more">探索更多</div>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -84,8 +86,10 @@
                         <div class="sign">NEW</div>
                         <div class="item-hover">
                             <div class="item-hover-center">
-                                <p>门型自动校直机</p>
-                                <div class="btn-more">探索更多</div>
+                                <a href="./product-details/product-details-1.html">
+                                    <p>门型自动校直机</p>
+                                    <div class="btn-more">探索更多</div>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -97,21 +101,10 @@
                         <div class="sign">NEW</div>
                         <div class="item-hover">
                             <div class="item-hover-center">
-                                <p>C 型自动校直机</p>
-                                <div class="btn-more">探索更多</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="p-item">
-                        <div class="img-responsive">
-                            <img class="center-block" src="./img/product/p__5.png" alt="">
-                        </div>
-                        <p>C 型自动校直机</p>
-                        <div class="sign">NEW</div>
-                        <div class="item-hover">
-                            <div class="item-hover-center">
-                                <p>C 型自动校直机</p>
-                                <div class="btn-more">探索更多</div>
+                                <a href="./product-details/product-details-2.html">
+                                    <p>C 型自动校直机</p>
+                                    <div class="btn-more">探索更多</div>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -125,16 +118,32 @@
                         <div class="sign">NEW</div>
                         <div class="item-hover">
                             <div class="item-hover-center">
-                                <p>压装机</p>
-                                <div class="btn-more">探索更多</div>
+                                <a href="./product-details/product-details-4.html">
+                                    <p>压装机</p>
+                                    <div class="btn-more">探索更多</div>
+                                </a>
                             </div>
                         </div>
                     </li>
                 </ul>
                 <ul class="clearfix hide" id="tabBody3">
-                    <li>热矫直机</li>
+                    <li class="p-item">
+                        <div class="img-responsive">
+                            <img class="center-block" src="./img/product/p__1.png" alt="">
+                        </div>
+                        <p>金属-陶瓷合成管热校直机</p>
+                        <div class="sign">NEW</div>
+                        <div class="item-hover">
+                            <div class="item-hover-center">
+                                <a href="./product-details/product-details-3.html">
+                                    <p>金属-陶瓷合成管热校直机</p>
+                                    <div class="btn-more">探索更多</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-                <ul class="clearfix hide" id="tabBody4">
+                <ul class="clearfix hide video-list" id="tabBody4">
                     <li class="p-item" data-src="http://player.youku.com/embed/XMzU0NTI1NTg2NA==" title="【视频】钻头自动校直机">
                         <img src="./img/product/video1.jpg" alt="【视频】钻头自动校直机">
                         <p>【视频】钻头自动校直机</p>
@@ -155,31 +164,73 @@
                 <div class="col-xs-12 xs-title">
                     上科矫直机系列
                 </div>
-                <div class="col-xs-12 xs-tab-btn">
-                    <span class="active tab-switch-btn">自动矫直机</span>
-                    <span class="tab-switch-btn">自动压装机</span>
-                    <span class="tab-switch-btn">热矫直机</span>
-                </div>
-                <div class="col-xs-12">
-                    <div class="img-responsive">
-                        <img class="center-block" src="./img/product/p__1.png" alt="">
+                <ul class="col-xs-12 xs-tab-btn tab-list">
+                    <li data-body='xsTabBody1' class="active tab-switch-btn">自动矫直机</li>
+                    <li data-body='xsTabBody2' class="tab-switch-btn">自动压装机</li>
+                    <li data-body='xsTabBody3' class="tab-switch-btn">热矫直机</li>
+                    <li data-body='xsTabBody4' class="tab-switch-btn">视频展示</li>
+                </ul>
+                <div class="xs-tab-body col-xs-12">
+                    <div id="xsTabBody1" class="col-xs-12 show">
+                        <div class="col-xs-12">
+                            <div class="img-responsive">
+                                <a href="./product-details/product-details-1.html">
+                                    <img class="center-block" src="./img/product/p__1.png" alt="">
+                                </a>
+                            </div>
+                            <p>门型自动校直机</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="img-responsive">
+                                <a href="./product-details/product-details-1.html">
+                                    <img class="center-block" src="./img/product/p__2.png" alt="">
+                                </a>
+                            </div>
+                            <p>门型自动校直机</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="img-responsive">
+                                <a href="./product-details/product-details-2.html">
+                                    <img class="center-block" src="./img/product/p__3.png" alt="">
+                                </a>
+                            </div>
+                            <p>C型自动校直机</p>
+                        </div>
                     </div>
-                    <p>门型自动校直机</p>
-                    <div class="btn-more">More</div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="img-responsive">
-                        <img class="center-block" src="./img/product/p__1.png" alt="">
+                    <div id="xsTabBody2" class="col-xs-12 hide">
+                        <div class="col-xs-12">
+                            <div class="img-responsive">
+                                <a href="./product-details/product-details-4.html">
+                                    <img class="center-block" src="./img/product/p__4.png" alt="">
+                                </a>
+                            </div>
+                            <p>压装机</p>
+                        </div>
                     </div>
-                    <p>门型自动校直机</p>
-                    <div class="btn-more">More</div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="img-responsive">
-                        <img class="center-block" src="./img/product/p__1.png" alt="">
+                    <div id="xsTabBody3" class="col-xs-12 hide">
+                        <div class="col-xs-12">
+                            <div class="img-responsive">
+                                <a href="./product-details/product-details-3.html">
+                                    <img class="center-block" src="./img/product/p__3.png" alt="">
+                                </a>
+                            </div>
+                            <p>金属-陶瓷合成管热校直机</p>
+                        </div>
                     </div>
-                    <p>门型自动校直机</p>
-                    <div class="btn-more">More</div>
+                    <ul class="clearfix hide video-list col-xs-12" id="xsTabBody4">
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTI1NTg2NA==" title="【视频】钻头自动校直机">
+                            <img src="./img/product/video1.jpg" class="img-responsive center-block" alt="【视频】钻头自动校直机">
+                            <p>【视频】钻头自动校直机</p>
+                        </li>
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTIwNjQwOA==" title="【视频】减震器管校直">
+                            <img src="./img/product/video2.jpg" class="img-responsive center-block" alt="【视频】减震器管校直">
+                            <p>【视频】减震器管校直</p>
+                        </li>
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTE4OTA5Mg==" title="【视频】齿轮轴校直机">
+                            <img src="./img/product/video3.jpg" class="img-responsive center-block" alt="【视频】齿轮轴校直机">
+                            <p>【视频】齿轮轴校直机</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -208,7 +259,7 @@
                         <li><a href="./technology.html">技术</a></li>
                         <li><a href="./scheme.html">方案</a></li>
                         <li><a href="./patents.html">专利</a></li>
-                        <li><a href="javascript:;">资讯</a></li>
+                        <li><a href="./information.html">资讯</a></li>
                         <li><a href="./about.html">关于</a></li>
                         <li><a href="./contact.html">联系</a></li>
                     </ul>

@@ -1,14 +1,13 @@
 $(function () {
-    $('.product-list li').on('click', function (ev) {
+    $('.tab-list').on('click','li', function () {
         var dom = $(this);
-        if (ev.target.nodeName == 'A') dom = $(ev.target).parent('li');
         dom.addClass('active').siblings().removeClass('active');
-        var index = dom.attr('data-index');
-        $('#tabBody' + index).addClass('show').removeClass('hide').siblings().addClass('hide').removeClass(
+        var body = dom.attr('data-body');
+        $('#' + body).addClass('show').removeClass('hide').siblings().addClass('hide').removeClass(
             'show');
     })
 
-    $('#tabBody4').on('click', 'li', function (ev) {
+    $('.video-list').on('click', 'li', function () {
         var src = $(this).data('src');
         var model = $('#imgModel');
 

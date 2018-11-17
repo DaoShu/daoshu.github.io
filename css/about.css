@@ -83,6 +83,11 @@
     text-indent: 0;
 }
 
+.company-pic-box img {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
 @media (max-width: 992px) {
     .about-content {
         padding: 0 5% 50px;
@@ -148,6 +153,11 @@
 
 /* PC端 */
 @media (min-width:768px) {
+    .company-pic-box img {
+        width: auto;
+        margin-bottom: 0;
+    }
+
     .about-content {
         width: 65% !important;
     }
