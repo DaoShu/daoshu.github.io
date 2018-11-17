@@ -125,6 +125,48 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.img-model {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100002;
+    width: 100%;
+    height: 100%;
+}
+
+.img-model .model-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    padding: 10px;
+    background: #fff;
+    width: 50%;
+    height: 80%;
+}
+
+.img-model .video-box {
+    width: 100%;
+    height: calc(100% - 40px);
+    background: #636160;
+}
+.img-model .glyphicon {
+    cursor: pointer;
+}
+.img-model h4 {
+    height: 30px;
+    line-height: 30px
+}
+
+.img-model-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 768px) {
     body {
         background: #fff;

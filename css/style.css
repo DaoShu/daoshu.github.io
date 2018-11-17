@@ -33,11 +33,11 @@ header {
     width: 100%;
     /* overflow: hidden; */
 }
-
+.header-logo {
+    background: #fff;
+}
 .logo {
-    position: absolute;
-    left: 5%;
-    top: 0px;
+    margin-left: 5%;
     width: 120px;
     z-index: 100001;
 }
