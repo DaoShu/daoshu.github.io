@@ -24,6 +24,7 @@ body {
     width: 220px;
     background: #636160;
     text-indent: 15%;
+    min-height: 430px;
 }
 
 .product-left h4 {
@@ -176,6 +177,7 @@ body {
 .video-list .col-xs-12 {
     margin-bottom: 2em;
 }
+
 .video-list .col-xs-12 p {
     margin-top: 1em;
 }
