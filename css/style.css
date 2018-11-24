@@ -1174,3 +1174,10 @@ nav ul li:hover a {
         height: 165px;
     }
 }
+
+
+
+/* 详情页样式 */
+.details-content {
+    font-size: 14px;
+}
