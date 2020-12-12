@@ -51,3 +51,10 @@
         box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, .1);
     }
 }
+
+#picBox {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-wrap: wrap;
+}

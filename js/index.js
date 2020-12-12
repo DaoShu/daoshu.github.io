@@ -119,7 +119,7 @@ function bannerSlider() {
         $('.switch-btn span').eq(i).addClass('active').siblings().removeClass('active');
         timer = setTimeout(function () {
             banner(i != $('.banner-box li').length - 1 ? i + 1 : 0);
-        }, 4000)
+        }, 10000)
     }
     banner(0);
     $('.switch-btn span').on('click', function () {

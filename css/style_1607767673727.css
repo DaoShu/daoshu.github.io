@@ -724,16 +724,16 @@ nav ul li:hover a {
 
 @media (min-width: 768px) {
     .visiton .text-content p:nth-child(1) {
-        font-size: 20px;
+        font-size: 18px;
         margin: 10px 0 15px 0;
     }
 
     .visiton .text-content p:nth-child(2) {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     p.text-indent {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
     .footer {
@@ -749,7 +749,7 @@ nav ul li:hover a {
     }
 
     .visiton-text .col-sm-6:nth-child(2) .text-content {
-        padding: 0 0 0 2em !important;
+        /* padding: 0 0 0 2em !important; */
     }
 
     .main {
@@ -992,6 +992,19 @@ nav ul li:hover a {
     .banner-text-content p:nth-child(2) {
         font-size: 13px;
     }
+
+    .visiton .text-content p:nth-child(1) {
+        font-size: 18px;
+        margin: 10px 0 15px 0;
+    }
+
+    .visiton .text-content p:nth-child(2) {
+        font-size: 14px;
+    }
+
+    p.text-indent {
+        font-size: 14px !important;
+    }
 }
 
 /* 1200000000000000000000000000000000000000000000 */
@@ -1143,6 +1156,18 @@ nav ul li:hover a {
     .footer .col-xs-9 {
         padding-right: 1.5em;
     }
+    .visiton .text-content p:nth-child(1) {
+        font-size: 20px;
+        margin: 10px 0 15px 0;
+    }
+
+    .visiton .text-content p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    p.text-indent {
+        font-size: 16px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1213,4 +1238,8 @@ nav ul li:hover a {
 /* 详情页样式 */
 .details-content {
     font-size: 14px;
+}
+
+.ifm-footer {
+    /* transform: translateY( 6px); */
 }
