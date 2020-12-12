@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/init.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/video-js-cdn.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/video.css">
 
     <title>上科官网</title>
 </head>
@@ -29,8 +31,8 @@
     <header class="navbar navbar-static-top bs-docs-nav" id="top">
         <div class="container-fluid" id="navContainer">
             <div class="navbar-header">
-                <button class="navbar-toggle" id="navToggleBtn" type="button" data-toggle="collapse" data-target="#bs-navbar"
-                    aria-controls="bs-navbar" aria-expanded="true">
+                <button class="navbar-toggle" id="navToggleBtn" type="button" data-toggle="collapse"
+                    data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="true">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -42,7 +44,7 @@
                     <li class="active"><a href="./product.html">产品</a></li>
                     <li><a href="./technology.html">技术</a></li>
                     <li><a href="./scheme.html">方案</a></li>
-                    <li><a href="./patents.html">专利</a></li>
+                    <li><a href="./patents.html">公司资质</a></li>
                     <li><a href="./information.html">资讯</a></li>
                     <li><a href="./about.html">关于</a></li>
                     <li><a href="./contact.html">联系</a></li>
@@ -54,57 +56,38 @@
     <section class="product-container container-fluid clearfix">
         <div class="main-container hidden-xs">
             <div class="product-left">
-                <h4>上科矫直机系列</h4>
+                <h4>上科校直机系列</h4>
                 <ul class="product-list tab-list">
-                    <li data-body='tabBody1' class="active"><a href="javascript:;">自动矫直机</a></a></li>
-                    <li data-body='tabBody2'><a href="javascript:;">自动压装机</a></a></li>
-                    <li data-body='tabBody3'><a href="javascript:;">热矫直机</a></a></li>
-                    <li data-body='tabBody4'><a href="javascript:;">视频展示</a></a></li>
+                    <li data-body='tabBody1' class="active" id="product"><a href="javascript:;">自动校直机</a></a></li>
+                    <!-- <li data-body='tabBody2'><a href="javascript:;">自动压装机</a></a></li>
+                    <li data-body='tabBody3'><a href="javascript:;">热校直机</a></a></li> -->
+                    <li data-body='tabBody4' id="video"><a href="javascript:;">视频展示</a></a></li>
                 </ul>
             </div>
             <div class="product-right">
                 <ul class="clearfix show" id="tabBody1">
-                    <li class="p-item">
-                        <div class="img-responsive">
-                            <img class="center-block" src="./img/product/p__1.png" alt="">
+                    <li class="product-box-item col-sm-4">
+                        <div class="product-box-img">
+                            <div class="sign">NEW</div>
+                            <img class="img-responsive center-block" src="./img/product_1.png" alt="产品">
+                            <div class="img-mask">
+                                <a href="./product-details/product-details-1.html">门型自动校直机</a>
+                            </div>
                         </div>
-                        <p>门型自动校直机</p>
-                        <div class="sign">NEW</div>
-                        <div class="item-hover">
-                            <a href="./product-details/product-details-1.html">
-                                <div class="item-hover-center">
-                                    <p>门型自动校直机</p>
-                                </div>
-                            </a>
+                        <div class="product-box-btn">
+                            <p>门型自动校直机</p>
                         </div>
                     </li>
-                    <li class="p-item">
-                        <div class="img-responsive">
-                            <img class="center-block" src="./img/product/p__2.png" alt="">
+                    <li class="product-box-item col-sm-4">
+                        <div class="product-box-img">
+                            <div class="sign">NEW</div>
+                            <img class="img-responsive center-block" src="./img/product_3.png" alt="产品">
+                            <div class="img-mask">
+                                <a href="./product-details/product-details-2.html">C 型自动校直机</a>
+                            </div>
                         </div>
-                        <p>门型自动校直机</p>
-                        <div class="sign">NEW</div>
-                        <div class="item-hover">
-                            <a href="./product-details/product-details-1.html">
-                                <div class="item-hover-center">
-                                    <p>门型自动校直机</p>
-
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="p-item">
-                        <div class="img-responsive">
-                            <img class="center-block" src="./img/product/p__3.png" alt="">
-                        </div>
-                        <p>C 型自动校直机</p>
-                        <div class="sign">NEW</div>
-                        <div class="item-hover">
-                            <a href="./product-details/product-details-2.html">
-                                <div class="item-hover-center">
-                                    <p>C 型自动校直机</p>
-                                </div>
-                            </a>
+                        <div class="product-box-btn">
+                            <p>C 型自动校直机</p>
                         </div>
                     </li>
                 </ul>
@@ -141,31 +124,22 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="clearfix hide video-list" id="tabBody4">
-                    <li class="p-item" data-src="http://player.youku.com/embed/XMzU0NTI1NTg2NA==" title="【视频】钻头自动校直机">
-                        <img src="./img/product/video1.jpg" alt="【视频】钻头自动校直机">
-                        <p>【视频】钻头自动校直机</p>
-                    </li>
-                    <li class="p-item" data-src="http://player.youku.com/embed/XMzU0NTIwNjQwOA==" title="【视频】减震器管校直">
-                        <img src="./img/product/video2.jpg" alt="【视频】减震器管校直">
-                        <p>【视频】减震器管校直</p>
-                    </li>
-                    <li class="p-item" data-src="http://player.youku.com/embed/XMzU0NTE4OTA5Mg==" title="【视频】齿轮轴校直机">
-                        <img src="./img/product/video3.jpg" alt="【视频】齿轮轴校直机">
-                        <p>【视频】齿轮轴校直机</p>
-                    </li>
-                </ul>
+                <div class="hide videos-container" id="tabBody4">
+                    <ul class=" video-list">
+                        <!-- 此处由js渲染 -->
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="main-container visible-xs-block">
             <div class="row">
                 <div class="col-xs-12 xs-title">
-                    上科矫直机系列
+                    上科校直机系列
                 </div>
                 <ul class="col-xs-12 xs-tab-btn tab-list">
-                    <li data-body='xsTabBody1' class="active tab-switch-btn">自动矫直机</li>
+                    <li data-body='xsTabBody1' class="active tab-switch-btn">自动校直机</li>
                     <li data-body='xsTabBody2' class="tab-switch-btn">自动压装机</li>
-                    <li data-body='xsTabBody3' class="tab-switch-btn">热矫直机</li>
+                    <li data-body='xsTabBody3' class="tab-switch-btn">热校直机</li>
                     <li data-body='xsTabBody4' class="tab-switch-btn">视频展示</li>
                 </ul>
                 <div class="xs-tab-body col-xs-12">
@@ -216,15 +190,18 @@
                         </div>
                     </div>
                     <ul class="clearfix hide video-list col-xs-12" id="xsTabBody4">
-                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTI1NTg2NA==" title="【视频】钻头自动校直机">
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTI1NTg2NA=="
+                            title="【视频】钻头自动校直机">
                             <img src="./img/product/video1.jpg" class="img-responsive center-block" alt="【视频】钻头自动校直机">
                             <p>【视频】钻头自动校直机</p>
                         </li>
-                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTIwNjQwOA==" title="【视频】减震器管校直">
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTIwNjQwOA=="
+                            title="【视频】减震器管校直">
                             <img src="./img/product/video2.jpg" class="img-responsive center-block" alt="【视频】减震器管校直">
                             <p>【视频】减震器管校直</p>
                         </li>
-                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTE4OTA5Mg==" title="【视频】齿轮轴校直机">
+                        <li class="col-xs-12" data-src="http://player.youku.com/embed/XMzU0NTE4OTA5Mg=="
+                            title="【视频】齿轮轴校直机">
                             <img src="./img/product/video3.jpg" class="img-responsive center-block" alt="【视频】齿轮轴校直机">
                             <p>【视频】齿轮轴校直机</p>
                         </li>
@@ -256,7 +233,7 @@
                         <li><a href="./product.html">产品</a></li>
                         <li><a href="./technology.html">技术</a></li>
                         <li><a href="./scheme.html">方案</a></li>
-                        <li><a href="./patents.html">专利</a></li>
+                        <li><a href="./patents.html">公司资质</a></li>
                         <li><a href="./information.html">资讯</a></li>
                         <li><a href="./about.html">关于</a></li>
                         <li><a href="./contact.html">联系</a></li>
@@ -295,6 +272,7 @@
 </body>
 
 <script src="./js/jquery-1.10.2.min.js"> </script>
+<script src="./js/video.core.min.js"> </script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/product.js"></script>
