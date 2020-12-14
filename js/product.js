@@ -15,7 +15,8 @@ $(function () {
         { name: '视频【钻头校直】', videoSrc: './videos/钻头校直.mp4', picSrc: './img/videos/钻头校直.png' },
     ]
 
-    renderVideoList($('#tabBody4 ul'), videoList)
+    renderVideoList($('#tabBody4 ul'), videoList, 'col-sm-4')
+    renderVideoList($('#xsTabBody4 ul'), videoList, 'col-xs-12')
 
     $('.tab-list').on('click', 'li', function () {
         var dom = $(this);
@@ -48,12 +49,12 @@ $(function () {
     })
 })
 
-function renderVideoList(box, videoList) {
+function renderVideoList(box, videoList, className) {
     var liList = '';
 
     videoList.forEach(d => {
         liList += `
-            <li class="p-item" data-src="${d.videoSrc}" title="${d.name}">
+            <li class="p-item ${className || ''}" data-src="${d.videoSrc}" title="${d.name}">
                 <img src="${d.picSrc}" alt=">${d.name}">
                 <p>${d.name}</p>
             </li>

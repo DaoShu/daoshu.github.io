@@ -198,7 +198,8 @@ body {
     }
 
     .visible-xs-block .col-xs-12 p {
-        font-size: 14px;
+        font-size: 15px;
+        margin: 10px 20px;
     }
 }
 

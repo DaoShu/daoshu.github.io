@@ -61,7 +61,9 @@
 
             parent.$("iframe.ifm-footer").parent().css('height', h + 'px')
         }
-        setHeight();
+        setTimeout(() => {
+            setHeight();
+        }, 100);
         $(document.body).off('resize').on('resize', setHeight)
     </script>
 </body>
