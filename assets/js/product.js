@@ -55,7 +55,7 @@ function renderVideoList(box, videoList, className) {
     videoList.forEach(d => {
         liList += `
             <li class="p-item ${className || ''}" data-src="${d.videoSrc}" title="${d.name}">
-                <img src="${d.picSrc}" alt=">${d.name}">
+                <img src="${d.picSrc}" alt="${d.name}">
                 <p>${d.name}</p>
             </li>
         `
