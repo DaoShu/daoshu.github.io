@@ -402,9 +402,7 @@ nav ul li:hover a {
 }
 
 .visiton .col-xs-3 p:last-child {
-    position: absolute;
-    bottom: 1.2em;
-    width: 100%;
+     margin-top: 1.2em;
 }
 
 .visiton .col-xs-9 {
@@ -417,7 +415,7 @@ nav ul li:hover a {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     height: 72px;
     line-height: 24px;
     color: #999;
@@ -1180,7 +1178,7 @@ nav ul li:hover a {
         padding-right: 1.5em;
     }
     .visiton .text-content p:nth-child(1) {
-        font-size: 20px;
+        font-size: 16px;
         margin: 10px 0 15px 0;
     }
 
@@ -1189,7 +1187,8 @@ nav ul li:hover a {
     }
 
     p.text-indent {
-        font-size: 16px !important;
+        font-size: 12px !important;
+        line-height: 1.5em !important;
     }
 }
 

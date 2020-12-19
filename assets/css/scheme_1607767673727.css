@@ -148,4 +148,7 @@
     .list-title {
         text-align: center;
     }
+    .list-img-box img {
+        width: 80%;
+    }
 }
